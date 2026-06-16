@@ -1,0 +1,50 @@
+name: Suggest a workflow
+description: Propose an AI workflow for us to verify and add to the list.
+title: "[workflow] <short title>"
+labels: ["workflow-suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! We build and **CI-verify every recipe ourselves** before it lands, so this is a proposal, not a direct edit to the list. Give us enough to reproduce it.
+  - type: input
+    id: title
+    attributes:
+      label: Workflow title
+      placeholder: "Kilo Code: a file-scoped docs mode"
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: Primary tool + repo or homepage
+      placeholder: "Kilo Code, https://github.com/Kilo-Org/kilocode"
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: What it does (one or two sentences)
+    validations:
+      required: true
+  - type: textarea
+    id: deterministic
+    attributes:
+      label: The deterministic part we can check in CI
+      description: The setup, config, or command that runs the same way every time with no API key. The model's own output is fenced and never counts as verified.
+      placeholder: ".kilocodemodes parses and the docs mode's edit group carries a fileRegex restriction"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source link (docs, repo, or your post)
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: This has a deterministic step that can be checked without an API key (the model's output itself does not count).
+          required: true
+        - label: I understand the maintainers build and verify the recipe, so this issue is a proposal.
+          required: true

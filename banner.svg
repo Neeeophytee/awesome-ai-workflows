@@ -1,0 +1,38 @@
+<svg width="1280" height="300" viewBox="0 0 1280 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Awesome AI Workflows">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b2417"/>
+      <stop offset="0.55" stop-color="#4a2e1d"/>
+      <stop offset="1" stop-color="#5a3a26"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1280" height="300" fill="url(#bg)"/>
+
+  <!-- subtle grid dots -->
+  <g fill="#ffffff" opacity="0.04">
+    <circle cx="1090" cy="60" r="3"/><circle cx="1140" cy="60" r="3"/><circle cx="1190" cy="60" r="3"/><circle cx="1240" cy="60" r="3"/>
+    <circle cx="1090" cy="110" r="3"/><circle cx="1140" cy="110" r="3"/><circle cx="1190" cy="110" r="3"/><circle cx="1240" cy="110" r="3"/>
+    <circle cx="1090" cy="160" r="3"/><circle cx="1140" cy="160" r="3"/><circle cx="1190" cy="160" r="3"/><circle cx="1240" cy="160" r="3"/>
+    <circle cx="1090" cy="210" r="3"/><circle cx="1140" cy="210" r="3"/><circle cx="1190" cy="210" r="3"/><circle cx="1240" cy="210" r="3"/>
+  </g>
+
+  <!-- FlowStacks logomark (exact mark, scaled 3.25x from 32x32) -->
+  <g transform="translate(96,98) scale(3.25)">
+    <rect width="32" height="32" rx="8" fill="#3f2515"/>
+    <rect x="8" y="9" width="16" height="3.4" rx="1.7" fill="#faf6f1"/>
+    <rect x="8" y="14.3" width="10" height="3.4" rx="1.7" fill="#cf9b6f"/>
+    <rect x="8" y="19.6" width="14" height="3.4" rx="1.7" fill="#faf6f1"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="232" y="140" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="700" fill="#fdf6ef">Awesome AI Workflows</text>
+  <text x="234" y="190" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="26" fill="#e8c9b0">Real, reproducible AI workflows. Verified to still work.</text>
+
+  <!-- verified pill -->
+  <g transform="translate(234,218)">
+    <rect x="0" y="0" width="196" height="40" rx="20" fill="#2f855a"/>
+    <text x="22" y="26" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff">&#10003;&#160; CI-verified</text>
+  </g>
+</svg>
