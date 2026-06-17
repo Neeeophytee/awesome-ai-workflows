@@ -7,13 +7,15 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-78-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-69-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-78-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-69-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 69 of them are checked by CI on every change, not by hand.
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
 **Like it? Star the repo ★** so other builders can find workflows that actually still run.
+
+[![Subscribe to the WebAfterAI newsletter](https://img.shields.io/badge/Subscribe-WebAfterAI%20newsletter-FF6719?style=for-the-badge&logo=substack&logoColor=white)](https://webafterai.substack.com)
 
 <sub>Powered by <a href="https://flowstacks.xyz">FlowStacks</a></sub>
 
