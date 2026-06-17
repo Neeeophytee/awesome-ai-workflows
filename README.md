@@ -7,9 +7,9 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-74-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-65-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-78-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-69-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz)
 
-Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 65 of them are checked by CI on every change, not by hand.
+Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 69 of them are checked by CI on every change, not by hand.
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -25,7 +25,7 @@ Most lists hand you code that worked _once_. **Every recipe here links to a page
 
 A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Each entry links to **[FlowStacks](https://flowstacks.xyz)**, where you'll find the full setup steps, the exact stack, the cost, and the verification tier.
 
-**74 workflows · 65 machine-verified · 47 tools indexed.**
+**78 workflows · 69 machine-verified · 50 tools indexed.**
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI. When a step breaks, the badge drops. [How verification works](#how-verification-works)
 
@@ -34,14 +34,14 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 ## Contents
 
 - [Coding & Code Review](#coding-code-review) <sub>(22)</sub>
-- [Agents & Orchestration](#agents-orchestration) <sub>(21)</sub>
+- [Agents & Orchestration](#agents-orchestration) <sub>(22)</sub>
 - [RAG & Knowledge](#rag-knowledge) <sub>(9)</sub>
 - [Research](#research) <sub>(3)</sub>
 - [Automation](#automation) <sub>(7)</sub>
-- [Local Inference](#local-inference) <sub>(8)</sub>
+- [Local Inference](#local-inference) <sub>(11)</sub>
 - [Security](#security) <sub>(2)</sub>
 - [Content](#content) <sub>(2)</sub>
-- [Tools indexed](#tools-indexed) <sub>(47)</sub>
+- [Tools indexed](#tools-indexed) <sub>(50)</sub>
 - [How verification works](#how-verification-works)
 - [Contributing](#contributing)
 - [License](#license)
@@ -135,6 +135,8 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
   Mirror Google's reference pattern: a model drafts one OKF concept per table or module, and a stricter project rule requires a # Citations section on anything with a resource, so the knowledge is checkable, not just plausible.<br/><sub>**Stack:** [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog).</sub>
 - `✓ CI-verified` **[OKF: consume a bundle without blowing your context window](https://flowstacks.xyz/workflows/okf-progressive-disclosure-consumer)**<br/>
   Use index.md for progressive disclosure so an agent navigates the graph instead of swallowing the whole folder, with reserved files that follow the spec.<br/><sub>**Stack:** [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog).</sub>
+- `✓ CI-verified` **[Hermes + OKF: a knowledge folder your agent reads before it answers](https://flowstacks.xyz/workflows/hermes-okf-knowledge-bundle)**<br/>
+  Wire an OKF knowledge bundle into Hermes so the agent reads knowledge/index.md first, validated bundle conformance + a SOUL.md house rule that points at it.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog).</sub>
 - `author-tested` **[Self-Hosted Self-Improving Agent with Hermes](https://flowstacks.xyz/workflows/hermes-self-improving-agent)**<br/>
   Stand up a Hermes agent that remembers and improves over time on your own VPS.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [Hetzner VPS](https://hetzner.com), [Ollama](https://ollama.com).</sub>
 - `author-tested` **[Fine-Tune an Open LLM to Make It Yours](https://flowstacks.xyz/workflows/fine-tune-llm-make-it-yours)**<br/>
@@ -197,6 +199,12 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
   Ask a free, offline model to draft or soften a delicate message (a note about money, a reply to a doctor, a careful complaint) knowing the contents stay on your machine.<br/><sub>**Stack:** [Ollama](https://ollama.com), [Google Gemma 3](https://ollama.com/library/gemma3).</sub>
 - `✓ CI-verified` **[Local model chore: read a photo with a vision model, on-device](https://flowstacks.xyz/workflows/local-llm-read-a-photo-vision)**<br/>
   Snap a receipt, a medication label, or a handwritten note, and have a free offline vision model read out the details so you do not have to squint and retype.<br/><sub>**Stack:** [Ollama](https://ollama.com), [Google Gemma 3](https://ollama.com/library/gemma3).</sub>
+- `✓ CI-verified` **[Serve MiniMax M3 yourself for agentic coding (vLLM)](https://flowstacks.xyz/workflows/serve-minimax-m3-coding)**<br/>
+  Stand up MiniMax M3 on an 8x H200 node as an OpenAI-compatible endpoint and point any coding agent at it, validated serve flags + endpoint config.<br/><sub>**Stack:** [vLLM](https://github.com/vllm-project/vllm), [MiniMax M3](https://huggingface.co/MiniMaxAI/MiniMax-M3).</sub>
+- `✓ CI-verified` **[Serve GLM-5.1 yourself for long-horizon agentic coding (vLLM)](https://flowstacks.xyz/workflows/serve-glm-51-coding)**<br/>
+  Stand up the MIT-licensed GLM-5.1 FP8 checkpoint as an OpenAI-compatible endpoint for long agentic runs, validated serve config + endpoint.<br/><sub>**Stack:** [vLLM](https://github.com/vllm-project/vllm), [GLM-5.1](https://huggingface.co/zai-org/GLM-5.1).</sub>
+- `✓ CI-verified` **[Serve NVIDIA Nemotron 3 Ultra yourself for high-throughput agents (vLLM)](https://flowstacks.xyz/workflows/serve-nemotron-3-ultra-coding)**<br/>
+  Stand up the NVFP4 Nemotron 3 Ultra checkpoint as an OpenAI-compatible endpoint for fast, long-running agent loops, validated serve flags + endpoint.<br/><sub>**Stack:** [vLLM](https://github.com/vllm-project/vllm), [NVIDIA Nemotron 3 Ultra](https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/).</sub>
 - `author-tested` **[Local Voice-to-Text that Replaces WisprFlow](https://flowstacks.xyz/workflows/local-voice-to-text-replace-wisprflow)**<br/>
   Run fully local dictation with whisper.cpp instead of paying for WisprFlow.<br/><sub>**Stack:** [whisper.cpp](https://github.com/ggerganov/whisper.cpp). _Replaces WisprFlow._</sub>
 - `author-tested` **[Local Text-to-Speech that Replaces ElevenLabs](https://flowstacks.xyz/workflows/local-tts-replace-elevenlabs)**<br/>
@@ -230,16 +238,17 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | --- | --- |
 | [Obsidian](https://obsidian.md) | 15 |
 | [Claude Code](https://claude.com/claude-code) | 12 |
-| [Hermes Agent](https://nousresearch.com) | 11 |
+| [Hermes Agent](https://nousresearch.com) | 12 |
 | [Ollama](https://ollama.com) | 8 |
 | [Claude Desktop](https://claude.ai/download) | 7 |
 | [MCPVault](https://github.com/bitbonsai/mcpvault) | 7 |
 | Codex (OpenAI) | 6 |
 | [OpenCode](https://opencode.ai) | 5 |
 | [Google Gemma 3](https://ollama.com/library/gemma3) | 4 |
+| [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog) | 4 |
+| [vLLM](https://github.com/vllm-project/vllm) | 4 |
 | DeepSeek V4 | 3 |
 | [Kilo Code](https://kilocode.ai) | 3 |
-| [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog) | 3 |
 | [Pi](https://pi.dev) | 3 |
 | [Vercel](https://vercel.com) | 3 |
 | [Letta](https://www.letta.com) | 2 |
@@ -254,6 +263,7 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [Docusaurus](https://docusaurus.io) | 1 |
 | [Fabric](https://github.com/danielmiessler/fabric) | 1 |
 | [FalkorDB](https://falkordb.com) | 1 |
+| [GLM-5.1](https://huggingface.co/zai-org/GLM-5.1) | 1 |
 | [GNU Coreutils](https://www.gnu.org/software/coreutils/) | 1 |
 | [Graphiti](https://github.com/getzep/graphiti) | 1 |
 | [Hetzner VPS](https://hetzner.com) | 1 |
@@ -261,8 +271,10 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [LibreChat](https://www.librechat.ai) | 1 |
 | [mcp-obsidian](https://github.com/MarkusPfundstein/mcp-obsidian) | 1 |
 | [Mem0](https://mem0.ai) | 1 |
+| [MiniMax M3](https://huggingface.co/MiniMaxAI/MiniMax-M3) | 1 |
 | [Next.js](https://nextjs.org) | 1 |
 | [NotebookLM](https://notebooklm.google.com) | 1 |
+| [NVIDIA Nemotron 3 Ultra](https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/) | 1 |
 | [Obsidian Local REST API](https://github.com/coddingtonbear/obsidian-local-rest-api) | 1 |
 | [OpenHands](https://docs.openhands.dev) | 1 |
 | [Outlines](https://github.com/dottxt-ai/outlines) | 1 |
@@ -273,7 +285,6 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [Tencent Hy3](https://github.com/Tencent-Hunyuan/Hy3-preview) | 1 |
 | [tldraw](https://tldraw.dev) | 1 |
 | [Vite](https://vite.dev) | 1 |
-| [vLLM](https://github.com/vllm-project/vllm) | 1 |
 | [whisper.cpp](https://github.com/ggerganov/whisper.cpp) | 1 |
 
 **Don't see your tool?** [Submit a workflow →](https://flowstacks.xyz/submit) and it lands here once it passes verification.
