@@ -7,9 +7,9 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-78-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-69-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-84-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-75-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
-Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 69 of them are checked by CI on every change, not by hand.
+Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 75 of them are checked by CI on every change, not by hand.
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -27,7 +27,7 @@ Most lists hand you code that worked _once_. **Every recipe here links to a page
 
 A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Each entry links to **[FlowStacks](https://flowstacks.xyz)**, where you'll find the full setup steps, the exact stack, the cost, and the verification tier.
 
-**78 workflows · 69 machine-verified · 50 tools indexed.**
+**84 workflows · 75 machine-verified · 53 tools indexed.**
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI. When a step breaks, the badge drops. [How verification works](#how-verification-works)
 
@@ -35,15 +35,15 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 
 ## Contents
 
-- [Coding & Code Review](#coding-code-review) <sub>(22)</sub>
-- [Agents & Orchestration](#agents-orchestration) <sub>(22)</sub>
+- [Coding & Code Review](#coding-code-review) <sub>(23)</sub>
+- [Agents & Orchestration](#agents-orchestration) <sub>(26)</sub>
 - [RAG & Knowledge](#rag-knowledge) <sub>(9)</sub>
-- [Research](#research) <sub>(3)</sub>
+- [Research](#research) <sub>(4)</sub>
 - [Automation](#automation) <sub>(7)</sub>
 - [Local Inference](#local-inference) <sub>(11)</sub>
 - [Security](#security) <sub>(2)</sub>
 - [Content](#content) <sub>(2)</sub>
-- [Tools indexed](#tools-indexed) <sub>(50)</sub>
+- [Tools indexed](#tools-indexed) <sub>(53)</sub>
 - [How verification works](#how-verification-works)
 - [Contributing](#contributing)
 - [License](#license)
@@ -94,6 +94,8 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
   Build a docs mode that can read the whole repo but only write to Markdown, using a fileRegex restriction on the edit group.<br/><sub>**Stack:** [Kilo Code](https://kilocode.ai).</sub>
 - `✓ CI-verified` **[Kilo Code: add an MCP tool and bind it to one mode](https://flowstacks.xyz/workflows/kilocode-scoped-mcp-mode)**<br/>
   Enable an MCP server's tools only on the mode that needs it (a researcher), so its tool definitions don't load into every conversation and burn tokens.<br/><sub>**Stack:** [Kilo Code](https://kilocode.ai).</sub>
+- `✓ CI-verified` **[OrcaRouter for coding: judge by passing tests, not by vibes](https://flowstacks.xyz/workflows/orcarouter-tests-pass-coding)**<br/>
+  Fan a hard coding task out to a panel and keep the candidate whose patch actually passes your tests, using the tests_pass arbiter.<br/><sub>**Stack:** [OrcaRouter](https://orcarouter.ai).</sub>
 - `author-tested` **[Persistent Memory for Codex using Obsidian](https://flowstacks.xyz/workflows/persistent-memory-codex-obsidian)**<br/>
   Give Codex durable, searchable long-term memory backed by an Obsidian vault.<br/><sub>**Stack:** Codex (OpenAI), [Obsidian](https://obsidian.md).</sub>
 
@@ -139,6 +141,14 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
   Use index.md for progressive disclosure so an agent navigates the graph instead of swallowing the whole folder, with reserved files that follow the spec.<br/><sub>**Stack:** [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog).</sub>
 - `✓ CI-verified` **[Hermes + OKF: a knowledge folder your agent reads before it answers](https://flowstacks.xyz/workflows/hermes-okf-knowledge-bundle)**<br/>
   Wire an OKF knowledge bundle into Hermes so the agent reads knowledge/index.md first, validated bundle conformance + a SOUL.md house rule that points at it.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog).</sub>
+- `✓ CI-verified` **[Rebuild Fable 5's deep-research fan-out on your own keys (OrcaRouter)](https://flowstacks.xyz/workflows/orcarouter-research-fanout)**<br/>
+  Fan a research prompt out to a panel of models you choose, then fuse or judge the answers with an arbiter, in a routing DSL you version and control.<br/><sub>**Stack:** [OrcaRouter](https://orcarouter.ai).</sub>
+- `✓ CI-verified` **[OrcaRouter: only fan out when it is worth it](https://flowstacks.xyz/workflows/orcarouter-gated-fanout)**<br/>
+  Gate the expensive fan-out behind a difficulty condition so easy chat stays cheap and only hard requests pay for a panel.<br/><sub>**Stack:** [OrcaRouter](https://orcarouter.ai).</sub>
+- `✓ CI-verified` **[Eve: gate the dangerous tool behind a human, in one field](https://flowstacks.xyz/workflows/eve-approval-gated-tool)**<br/>
+  Make an Eve agent's irreversible tool stop and wait for a person above a threshold, using the needsApproval predicate, and verify the file is shaped right before you trust it.<br/><sub>**Stack:** [Eve](https://vercel.com/docs/eve).</sub>
+- `✓ CI-verified` **[Eve: make evals the deploy gate, not a vibe check](https://flowstacks.xyz/workflows/eve-evals-as-ci-gate)**<br/>
+  Write a file-based Eve eval that asserts a large refund routes through approval, and wire eve eval into CI so a prompt change can't ship a regression.<br/><sub>**Stack:** [Eve](https://vercel.com/docs/eve).</sub>
 - `author-tested` **[Self-Hosted Self-Improving Agent with Hermes](https://flowstacks.xyz/workflows/hermes-self-improving-agent)**<br/>
   Stand up a Hermes agent that remembers and improves over time on your own VPS.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [Hetzner VPS](https://hetzner.com), [Ollama](https://ollama.com).</sub>
 - `author-tested` **[Fine-Tune an Open LLM to Make It Yours](https://flowstacks.xyz/workflows/fine-tune-llm-make-it-yours)**<br/>
@@ -171,6 +181,8 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
   Log decisions with frontmatter, let Claude update the outcome safely, and read the patterns each quarter.<br/><sub>**Stack:** [Obsidian](https://obsidian.md), [MCPVault](https://github.com/bitbonsai/mcpvault), [Claude Desktop](https://claude.ai/download).</sub>
 - `✓ CI-verified` **[Fabric + Fable 5: Get Through Your Reading Pile](https://flowstacks.xyz/workflows/fabric-fable5-reading-patterns)**<br/>
   Pipe any article, video transcript, or document into a prebuilt Fabric pattern and have Fable 5 summarize, extract, or analyze it in one line.<br/><sub>**Stack:** [Fabric](https://github.com/danielmiessler/fabric).</sub>
+- `✓ CI-verified` **[Track a tool's hype curve across any Substack (no API key)](https://flowstacks.xyz/workflows/substack-hype-tracker)**<br/>
+  Count how often a tool or model is mentioned in a Substack's posts over time, so you can see a hype curve rise and fade, using only the public archive.<br/><sub>**Stack:** [Substack](https://substack.com).</sub>
 - `author-tested` **[Hermes + NotebookLM "Second Brain"](https://flowstacks.xyz/workflows/hermes-notebooklm-second-brain)**<br/>
   Pair Hermes with NotebookLM to build a self-researching, self-teaching knowledge system.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [NotebookLM](https://notebooklm.google.com), [Obsidian](https://obsidian.md). _Replaces Perplexity Pro._</sub>
 
@@ -251,8 +263,10 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [vLLM](https://github.com/vllm-project/vllm) | 4 |
 | DeepSeek V4 | 3 |
 | [Kilo Code](https://kilocode.ai) | 3 |
+| [OrcaRouter](https://orcarouter.ai) | 3 |
 | [Pi](https://pi.dev) | 3 |
 | [Vercel](https://vercel.com) | 3 |
+| [Eve](https://vercel.com/docs/eve) | 2 |
 | [Letta](https://www.letta.com) | 2 |
 | [LM Studio](https://lmstudio.ai) | 2 |
 | [Mnemosyne](https://github.com/AxDSan/mnemosyne) | 2 |
@@ -284,6 +298,7 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [Piper TTS](https://github.com/rhasspy/piper) | 1 |
 | [Postiz](https://postiz.com) | 1 |
 | [Repomix](https://repomix.com) | 1 |
+| [Substack](https://substack.com) | 1 |
 | [Tencent Hy3](https://github.com/Tencent-Hunyuan/Hy3-preview) | 1 |
 | [tldraw](https://tldraw.dev) | 1 |
 | [Vite](https://vite.dev) | 1 |
