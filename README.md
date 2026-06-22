@@ -7,9 +7,9 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-88-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-79-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-90-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-81-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
-Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 79 of them are checked by CI on every change, not by hand.
+Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 81 of them are checked by CI on every change, not by hand.
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -27,7 +27,7 @@ Most lists hand you code that worked _once_. **Every recipe here links to a page
 
 A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Each entry links to **[FlowStacks](https://flowstacks.xyz)**, where you'll find the full setup steps, the exact stack, the cost, and the verification tier.
 
-**88 workflows · 79 machine-verified · 56 tools indexed.**
+**90 workflows · 81 machine-verified · 57 tools indexed.**
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI. When a step breaks, the badge drops. [How verification works](#how-verification-works)
 
@@ -36,14 +36,14 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 ## Contents
 
 - [Coding & Code Review](#coding-code-review) <sub>(23)</sub>
-- [Agents & Orchestration](#agents-orchestration) <sub>(27)</sub>
+- [Agents & Orchestration](#agents-orchestration) <sub>(29)</sub>
 - [RAG & Knowledge](#rag-knowledge) <sub>(10)</sub>
 - [Research](#research) <sub>(4)</sub>
 - [Automation](#automation) <sub>(9)</sub>
 - [Local Inference](#local-inference) <sub>(11)</sub>
 - [Security](#security) <sub>(2)</sub>
 - [Content](#content) <sub>(2)</sub>
-- [Tools indexed](#tools-indexed) <sub>(56)</sub>
+- [Tools indexed](#tools-indexed) <sub>(57)</sub>
 - [How verification works](#how-verification-works)
 - [Contributing](#contributing)
 - [License](#license)
@@ -151,6 +151,10 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
   Write a file-based Eve eval that asserts a large refund routes through approval, and wire eve eval into CI so a prompt change can't ship a regression.<br/><sub>**Stack:** [Eve](https://vercel.com/docs/eve).</sub>
 - `✓ CI-verified` **[Run GLM-5.2 fully local on a Mac Studio and drive it with Hermes](https://flowstacks.xyz/workflows/glm-52-mac-studio-hermes)**<br/>
   Serve GLM-5.2's 2-bit GGUF on a Mac Studio over an OpenAI-compatible endpoint, point Hermes at it as a custom provider, and hand it long hands-off agentic jobs.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [GLM-5.2](https://huggingface.co/unsloth/GLM-5.2-GGUF), [LM Studio](https://lmstudio.ai).</sub>
+- `✓ CI-verified` **[Sakana Fugu: A/B it on your own task before you migrate](https://flowstacks.xyz/workflows/fugu-openai-endpoint-eval)**<br/>
+  Point an OpenAI-compatible client at the Fugu endpoint and compare it to a single strong model on one hard task you already know the answer to, instead of trusting a benchmark chart.<br/><sub>**Stack:** [Sakana Fugu](https://sakana.ai/fugu/).</sub>
+- `✓ CI-verified` **[Build the Fugu pattern in the open: fan out, assign roles, verify](https://flowstacks.xyz/workflows/diy-orchestrate-and-verify)**<br/>
+  Run the idea under Fugu, a panel of models with roles and a verifier or a tests-passing arbiter, with your own keys and every hop visible, so the black box is a choice and not a lock-in.<br/><sub>**Stack:** [OrcaRouter](https://orcarouter.ai).</sub>
 - `author-tested` **[Self-Hosted Self-Improving Agent with Hermes](https://flowstacks.xyz/workflows/hermes-self-improving-agent)**<br/>
   Stand up a Hermes agent that remembers and improves over time on your own VPS.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [Hetzner VPS](https://hetzner.com), [Ollama](https://ollama.com).</sub>
 - `author-tested` **[Fine-Tune an Open LLM to Make It Yours](https://flowstacks.xyz/workflows/fine-tune-llm-make-it-yours)**<br/>
@@ -268,11 +272,11 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [OpenCode](https://opencode.ai) | 5 |
 | [Google Gemma 3](https://ollama.com/library/gemma3) | 4 |
 | [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog) | 4 |
+| [OrcaRouter](https://orcarouter.ai) | 4 |
 | [vLLM](https://github.com/vllm-project/vllm) | 4 |
 | DeepSeek V4 | 3 |
 | [Kilo Code](https://kilocode.ai) | 3 |
 | [LM Studio](https://lmstudio.ai) | 3 |
-| [OrcaRouter](https://orcarouter.ai) | 3 |
 | [Pi](https://pi.dev) | 3 |
 | [Vercel](https://vercel.com) | 3 |
 | [Eve](https://vercel.com/docs/eve) | 2 |
@@ -308,6 +312,7 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [Piper TTS](https://github.com/rhasspy/piper) | 1 |
 | [Postiz](https://postiz.com) | 1 |
 | [Repomix](https://repomix.com) | 1 |
+| [Sakana Fugu](https://sakana.ai/fugu/) | 1 |
 | [Scrapy](https://scrapy.org) | 1 |
 | [Substack](https://substack.com) | 1 |
 | [Tencent Hy3](https://github.com/Tencent-Hunyuan/Hy3-preview) | 1 |
