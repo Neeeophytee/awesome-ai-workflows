@@ -7,9 +7,9 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-90-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-81-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-103-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-94-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
-Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 81 of them are checked by CI on every change, not by hand.
+Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 94 of them are checked by CI on every change, not by hand.
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -27,7 +27,7 @@ Most lists hand you code that worked _once_. **Every recipe here links to a page
 
 A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Each entry links to **[FlowStacks](https://flowstacks.xyz)**, where you'll find the full setup steps, the exact stack, the cost, and the verification tier.
 
-**90 workflows · 81 machine-verified · 57 tools indexed.**
+**103 workflows · 94 machine-verified · 68 tools indexed.**
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI. When a step breaks, the badge drops. [How verification works](#how-verification-works)
 
@@ -35,15 +35,15 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 
 ## Contents
 
-- [Coding & Code Review](#coding-code-review) <sub>(23)</sub>
-- [Agents & Orchestration](#agents-orchestration) <sub>(29)</sub>
+- [Coding & Code Review](#coding-code-review) <sub>(24)</sub>
+- [Agents & Orchestration](#agents-orchestration) <sub>(37)</sub>
 - [RAG & Knowledge](#rag-knowledge) <sub>(10)</sub>
 - [Research](#research) <sub>(4)</sub>
 - [Automation](#automation) <sub>(9)</sub>
 - [Local Inference](#local-inference) <sub>(11)</sub>
-- [Security](#security) <sub>(2)</sub>
-- [Content](#content) <sub>(2)</sub>
-- [Tools indexed](#tools-indexed) <sub>(57)</sub>
+- [Security](#security) <sub>(5)</sub>
+- [Content](#content) <sub>(3)</sub>
+- [Tools indexed](#tools-indexed) <sub>(68)</sub>
 - [How verification works](#how-verification-works)
 - [Contributing](#contributing)
 - [License](#license)
@@ -96,21 +96,23 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
   Enable an MCP server's tools only on the mode that needs it (a researcher), so its tool definitions don't load into every conversation and burn tokens.<br/><sub>**Stack:** [Kilo Code](https://kilocode.ai).</sub>
 - `✓ CI-verified` **[OrcaRouter for coding: judge by passing tests, not by vibes](https://flowstacks.xyz/workflows/orcarouter-tests-pass-coding)**<br/>
   Fan a hard coding task out to a panel and keep the candidate whose patch actually passes your tests, using the tests_pass arbiter.<br/><sub>**Stack:** [OrcaRouter](https://orcarouter.ai).</sub>
+- `✓ CI-verified` **[codebase-memory-mcp: wire the knowledge graph, stop re-reading files](https://flowstacks.xyz/workflows/codebase-memory-mcp-token-savings)**<br/>
+  Point your MCP client at a codebase-memory-mcp server so your coding agent queries the repo's knowledge graph instead of re-reading files into context on every question, cutting token spend without changing answer quality.<br/><sub>**Stack:** [codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp).</sub>
 - `author-tested` **[Persistent Memory for Codex using Obsidian](https://flowstacks.xyz/workflows/persistent-memory-codex-obsidian)**<br/>
   Give Codex durable, searchable long-term memory backed by an Obsidian vault.<br/><sub>**Stack:** Codex (OpenAI), [Obsidian](https://obsidian.md).</sub>
 
 ## Agents & Orchestration
 
 - `✓ CI-verified` **[Obsidian Vault as the Core of Your Agent Harness](https://flowstacks.xyz/workflows/obsidian-agent-harness)**<br/>
-  Use an Obsidian vault as the shared memory and control surface for your agents.<br/><sub>**Stack:** [Obsidian](https://obsidian.md), [Hermes Agent](https://nousresearch.com), [Claude Code](https://claude.com/claude-code).</sub>
+  Use an Obsidian vault as the shared memory and control surface for your agents.<br/><sub>**Stack:** [Obsidian](https://obsidian.md), [Hermes Agent](https://hermes-agent.nousresearch.com), [Claude Code](https://claude.com/claude-code).</sub>
 - `✓ CI-verified` **[Meeting Processor: Raw Dump to Structured Note](https://flowstacks.xyz/workflows/obsidian-claude-meeting-processor)**<br/>
   Paste a raw meeting dump into your vault and have Claude turn it into action items, decisions, and links.<br/><sub>**Stack:** [Obsidian](https://obsidian.md), [obsidian-mcp](https://github.com/StevenStavrakis/obsidian-mcp), [Claude Desktop](https://claude.ai/download).</sub>
 - `✓ CI-verified` **[Hermes Kanban: The Research-to-Draft Relay](https://flowstacks.xyz/workflows/hermes-kanban-research-to-draft-relay)**<br/>
-  Two researchers work in parallel, then a writer's card unblocks once both finish.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com).</sub>
+  Two researchers work in parallel, then a writer's card unblocks once both finish.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com).</sub>
 - `✓ CI-verified` **[Hermes Kanban: The Idempotent Nightly Review](https://flowstacks.xyz/workflows/hermes-kanban-idempotent-nightly-review)**<br/>
-  A task that files itself onto the board every night and never double-books.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com).</sub>
+  A task that files itself onto the board every night and never double-books.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com).</sub>
 - `✓ CI-verified` **[Hermes Kanban: The Swarm](https://flowstacks.xyz/workflows/hermes-kanban-the-swarm)**<br/>
-  Fan a goal out to N parallel workers, gate a verifier on all of them, then a synthesizer on the verifier.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com).</sub>
+  Fan a goal out to N parallel workers, gate a verifier on all of them, then a synthesizer on the verifier.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com).</sub>
 - `✓ CI-verified` **[Obsidian × MCPVault: The Project Kickoff Generator](https://flowstacks.xyz/workflows/mcpvault-project-kickoff-generator)**<br/>
   Hand Claude your goals and constraints and have it scaffold a whole project folder from what your vault already knows.<br/><sub>**Stack:** [Obsidian](https://obsidian.md), [MCPVault](https://github.com/bitbonsai/mcpvault), [Claude Desktop](https://claude.ai/download).</sub>
 - `✓ CI-verified` **[Mnemosyne: Fully Local Agent Memory, No Cloud at All](https://flowstacks.xyz/workflows/mnemosyne-local-first-agent-memory)**<br/>
@@ -124,15 +126,15 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - `✓ CI-verified` **[Letta + Fable 5: Persistent Memory for Multi-Week Projects](https://flowstacks.xyz/workflows/letta-fable5-persistent-memory)**<br/>
   Give Fable 5 a memory that survives restarts via Letta's structured memory blocks, so a project runs for weeks, not one session.<br/><sub>**Stack:** [Letta](https://www.letta.com).</sub>
 - `✓ CI-verified` **[Hermes on MiMo-V2.5: a 1M-context agent for pennies](https://flowstacks.xyz/workflows/hermes-mimo-v25-default-driver)**<br/>
-  Set MiMo-V2.5 as your everyday Hermes model: 1M context at $0.14/$0.28 per 1M tokens, with tool-use enforcement on for a non-GPT model.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [Xiaomi MiMo](https://huggingface.co/XiaomiMiMo).</sub>
+  Set MiMo-V2.5 as your everyday Hermes model: 1M context at $0.14/$0.28 per 1M tokens, with tool-use enforcement on for a non-GPT model.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com), [Xiaomi MiMo](https://huggingface.co/XiaomiMiMo).</sub>
 - `✓ CI-verified` **[Hermes + DeepSeek V4 Flash: a one-line reasoning-effort throttle](https://flowstacks.xyz/workflows/hermes-deepseek-v4-flash-effort-throttle)**<br/>
-  Run one model from cheap-and-fast to deep-and-careful with a single reasoning_effort setting, so you don't pay for deep thinking on easy turns.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), DeepSeek V4.</sub>
+  Run one model from cheap-and-fast to deep-and-careful with a single reasoning_effort setting, so you don't pay for deep thinking on easy turns.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com), DeepSeek V4.</sub>
 - `✓ CI-verified` **[Hermes: offload background jobs to MiMo-V2-Flash and cut your main bill](https://flowstacks.xyz/workflows/hermes-mimo-v2-flash-auxiliary-offload)**<br/>
-  Route Hermes' cheap, high-volume auxiliary work (compression, vision, web-extract) to MiMo-V2-Flash so your expensive main model only handles real reasoning.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [Xiaomi MiMo](https://huggingface.co/XiaomiMiMo).</sub>
+  Route Hermes' cheap, high-volume auxiliary work (compression, vision, web-extract) to MiMo-V2-Flash so your expensive main model only handles real reasoning.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com), [Xiaomi MiMo](https://huggingface.co/XiaomiMiMo).</sub>
 - `✓ CI-verified` **[Hermes: a scheduled agentic briefing on Hy3-preview](https://flowstacks.xyz/workflows/hermes-hy3-preview-scheduled-briefing)**<br/>
-  Schedule a hands-off tool-using job (search, summarize, deliver) on the cheap, agentic Hy3-preview model, validated cron + config.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [Tencent Hy3](https://github.com/Tencent-Hunyuan/Hy3-preview).</sub>
+  Schedule a hands-off tool-using job (search, summarize, deliver) on the cheap, agentic Hy3-preview model, validated cron + config.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com), [Tencent Hy3](https://github.com/Tencent-Hunyuan/Hy3-preview).</sub>
 - `✓ CI-verified` **[Hermes + Mnemosyne: give the cheap agent a local memory](https://flowstacks.xyz/workflows/hermes-mnemosyne-persistent-memory)**<br/>
-  Wire Mnemosyne into Hermes as an MCP server so a budget model stops re-stuffing the same context every session, validated config + a real remember→recall round-trip.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [Mnemosyne](https://github.com/AxDSan/mnemosyne).</sub>
+  Wire Mnemosyne into Hermes as an MCP server so a budget model stops re-stuffing the same context every session, validated config + a real remember→recall round-trip.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com), [Mnemosyne](https://github.com/AxDSan/mnemosyne).</sub>
 - `✓ CI-verified` **[OKF: turn your repo's tribal knowledge into a bundle your agent reads first](https://flowstacks.xyz/workflows/okf-repo-knowledge-bundle)**<br/>
   Write one markdown concept per thing worth knowing, cross-linked, as a conformant OKF bundle in version control that any agent can read with no SDK.<br/><sub>**Stack:** [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog).</sub>
 - `✓ CI-verified` **[OKF: generate a bundle from your schema, then ground it with citations](https://flowstacks.xyz/workflows/okf-generate-and-ground-bundle)**<br/>
@@ -140,7 +142,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - `✓ CI-verified` **[OKF: consume a bundle without blowing your context window](https://flowstacks.xyz/workflows/okf-progressive-disclosure-consumer)**<br/>
   Use index.md for progressive disclosure so an agent navigates the graph instead of swallowing the whole folder, with reserved files that follow the spec.<br/><sub>**Stack:** [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog).</sub>
 - `✓ CI-verified` **[Hermes + OKF: a knowledge folder your agent reads before it answers](https://flowstacks.xyz/workflows/hermes-okf-knowledge-bundle)**<br/>
-  Wire an OKF knowledge bundle into Hermes so the agent reads knowledge/index.md first, validated bundle conformance + a SOUL.md house rule that points at it.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog).</sub>
+  Wire an OKF knowledge bundle into Hermes so the agent reads knowledge/index.md first, validated bundle conformance + a SOUL.md house rule that points at it.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com), [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog).</sub>
 - `✓ CI-verified` **[Rebuild Fable 5's deep-research fan-out on your own keys (OrcaRouter)](https://flowstacks.xyz/workflows/orcarouter-research-fanout)**<br/>
   Fan a research prompt out to a panel of models you choose, then fuse or judge the answers with an arbiter, in a routing DSL you version and control.<br/><sub>**Stack:** [OrcaRouter](https://orcarouter.ai).</sub>
 - `✓ CI-verified` **[OrcaRouter: only fan out when it is worth it](https://flowstacks.xyz/workflows/orcarouter-gated-fanout)**<br/>
@@ -150,13 +152,29 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - `✓ CI-verified` **[Eve: make evals the deploy gate, not a vibe check](https://flowstacks.xyz/workflows/eve-evals-as-ci-gate)**<br/>
   Write a file-based Eve eval that asserts a large refund routes through approval, and wire eve eval into CI so a prompt change can't ship a regression.<br/><sub>**Stack:** [Eve](https://vercel.com/docs/eve).</sub>
 - `✓ CI-verified` **[Run GLM-5.2 fully local on a Mac Studio and drive it with Hermes](https://flowstacks.xyz/workflows/glm-52-mac-studio-hermes)**<br/>
-  Serve GLM-5.2's 2-bit GGUF on a Mac Studio over an OpenAI-compatible endpoint, point Hermes at it as a custom provider, and hand it long hands-off agentic jobs.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [GLM-5.2](https://huggingface.co/unsloth/GLM-5.2-GGUF), [LM Studio](https://lmstudio.ai).</sub>
+  Serve GLM-5.2's 2-bit GGUF on a Mac Studio over an OpenAI-compatible endpoint, point Hermes at it as a custom provider, and hand it long hands-off agentic jobs.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com), [GLM-5.2](https://huggingface.co/unsloth/GLM-5.2-GGUF), [LM Studio](https://lmstudio.ai).</sub>
 - `✓ CI-verified` **[Sakana Fugu: A/B it on your own task before you migrate](https://flowstacks.xyz/workflows/fugu-openai-endpoint-eval)**<br/>
   Point an OpenAI-compatible client at the Fugu endpoint and compare it to a single strong model on one hard task you already know the answer to, instead of trusting a benchmark chart.<br/><sub>**Stack:** [Sakana Fugu](https://sakana.ai/fugu/).</sub>
 - `✓ CI-verified` **[Build the Fugu pattern in the open: fan out, assign roles, verify](https://flowstacks.xyz/workflows/diy-orchestrate-and-verify)**<br/>
   Run the idea under Fugu, a panel of models with roles and a verifier or a tests-passing arbiter, with your own keys and every hop visible, so the black box is a choice and not a lock-in.<br/><sub>**Stack:** [OrcaRouter](https://orcarouter.ai).</sub>
+- `✓ CI-verified` **[Flue: define a sandboxed headless agent and deploy it anywhere](https://flowstacks.xyz/workflows/flue-sandbox-agent-deploy)**<br/>
+  Author a Flue agent manifest that runs each agent in a sandbox instead of a dedicated container, keeping infra costs flat as task volume grows, and validate the config before you deploy.<br/><sub>**Stack:** [Flue](https://github.com/withastro/flue).</sub>
+- `✓ CI-verified` **[FreeLLMAPI: one socket, sixteen free model tiers with auto-fallback](https://flowstacks.xyz/workflows/freellmapi-unified-free-models)**<br/>
+  Front the free tiers of many providers with a single OpenAI-compatible endpoint and a prioritized fallback chain, so your apps point at one key and the router switches providers automatically when one runs out for the day.<br/><sub>**Stack:** [FreeLLMAPI](https://freellmapi.co).</sub>
+- `✓ CI-verified` **[Text your own AI assistant on WhatsApp: Hermes wired to FreeLLMAPI](https://flowstacks.xyz/workflows/hermes-whatsapp-freellm-assistant)**<br/>
+  Point Hermes Agent at a FreeLLMAPI backend and connect it to WhatsApp, so a memory-keeping assistant runs 24/7 on a free always-on server and costs nothing per message, with the wiring validated before you link a number.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com), [FreeLLMAPI](https://freellmapi.co).</sub>
+- `✓ CI-verified` **[Hermes /learn: author a reusable skill from a source, not by hand](https://flowstacks.xyz/workflows/hermes-learn-skill-from-source)**<br/>
+  Use Hermes Agent's /learn to turn a doc, a repo, or a workflow you just performed into a standards-compliant SKILL.md (and an automatic slash command), instead of hand-writing a skill file that drifts from the real docs.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com).</sub>
+- `✓ CI-verified` **[Write an agent loop in code with smolagents (sandboxed)](https://flowstacks.xyz/workflows/smolagents-code-agent-loop)**<br/>
+  Stand up a smolagents CodeAgent that writes Python to act instead of emitting JSON tool calls, and run that model-written code in a sandbox, not on your machine.<br/><sub>**Stack:** [smolagents](https://huggingface.co/docs/smolagents), [E2B](https://e2b.dev).</sub>
+- `✓ CI-verified` **[DSPy: program the pipeline, compile the prompts (stop hand-tuning)](https://flowstacks.xyz/workflows/dspy-compile-prompts)**<br/>
+  Define an agent step as a DSPy program with a signature, a module, and a metric, so an optimizer improves the prompts against your metric instead of you fiddling by hand.<br/><sub>**Stack:** [DSPy](https://github.com/stanfordnlp/dspy).</sub>
+- `✓ CI-verified` **[E2B: run model-written code in a sandbox, not on your box](https://flowstacks.xyz/workflows/e2b-sandbox-untrusted-code)**<br/>
+  Execute AI-generated code in an isolated E2B cloud sandbox with the API key read from the environment, so untrusted code never touches your laptop or prod.<br/><sub>**Stack:** [E2B](https://e2b.dev).</sub>
+- `✓ CI-verified` **[promptfoo: make agent evals fail the build, not the user](https://flowstacks.xyz/workflows/promptfoo-evals-in-ci)**<br/>
+  Write a declarative promptfoo config with real assertions and wire promptfoo eval into CI, so a regression in prompt or agent behavior fails a check instead of reaching production.<br/><sub>**Stack:** [promptfoo](https://promptfoo.dev).</sub>
 - `author-tested` **[Self-Hosted Self-Improving Agent with Hermes](https://flowstacks.xyz/workflows/hermes-self-improving-agent)**<br/>
-  Stand up a Hermes agent that remembers and improves over time on your own VPS.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [Hetzner VPS](https://hetzner.com), [Ollama](https://ollama.com).</sub>
+  Stand up a Hermes agent that remembers and improves over time on your own VPS.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com), [Hetzner VPS](https://hetzner.com), [Ollama](https://ollama.com).</sub>
 - `author-tested` **[Fine-Tune an Open LLM to Make It Yours](https://flowstacks.xyz/workflows/fine-tune-llm-make-it-yours)**<br/>
   Adapt an open-weight model to your domain with a small dataset.<br/><sub>**Stack:** [vLLM](https://github.com/vllm-project/vllm).</sub>
 
@@ -192,7 +210,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - `✓ CI-verified` **[Track a tool's hype curve across any Substack (no API key)](https://flowstacks.xyz/workflows/substack-hype-tracker)**<br/>
   Count how often a tool or model is mentioned in a Substack's posts over time, so you can see a hype curve rise and fade, using only the public archive.<br/><sub>**Stack:** [Substack](https://substack.com).</sub>
 - `author-tested` **[Hermes + NotebookLM "Second Brain"](https://flowstacks.xyz/workflows/hermes-notebooklm-second-brain)**<br/>
-  Pair Hermes with NotebookLM to build a self-researching, self-teaching knowledge system.<br/><sub>**Stack:** [Hermes Agent](https://nousresearch.com), [NotebookLM](https://notebooklm.google.com), [Obsidian](https://obsidian.md). _Replaces Perplexity Pro._</sub>
+  Pair Hermes with NotebookLM to build a self-researching, self-teaching knowledge system.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com), [NotebookLM](https://notebooklm.google.com), [Obsidian](https://obsidian.md). _Replaces Perplexity Pro._</sub>
 
 ## Automation
 
@@ -246,6 +264,12 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
   Define exactly what a scheduled or headless Claude Code run may do via settings.json permission rules.<br/><sub>**Stack:** [Claude Code](https://claude.com/claude-code).</sub>
 - `✓ CI-verified` **[Claude Code Auto Mode: A Classifier Instead of an Allowlist](https://flowstacks.xyz/workflows/claude-code-auto-mode)**<br/>
   Set Auto Mode as your default so a classifier reviews each action instead of pre-listing every command.<br/><sub>**Stack:** [Claude Code](https://claude.com/claude-code).</sub>
+- `✓ CI-verified` **[SkillSpector: fail your CI build on a risky agent skill](https://flowstacks.xyz/workflows/skillspector-ci-gate)**<br/>
+  Scan every skill you did not write with SkillSpector and gate CI on the result, so a malicious or vulnerable SKILL.md fails the build instead of running with your agent's permissions at runtime.<br/><sub>**Stack:** [SkillSpector](https://github.com/NVIDIA/SkillSpector).</sub>
+- `✓ CI-verified` **[Vet a SKILL.md before you install it](https://flowstacks.xyz/workflows/vet-agent-skill-before-install)**<br/>
+  Treat an agent skill like the untrusted dependency it is: parse its SKILL.md, confirm the frontmatter is well-formed, and surface every executable script it bundles, since the research flagged script-bearing skills as the most dangerous, before you ever let your agent run it.<br/><sub>**Stack:** [Agent Skills](https://github.com/addyosmani/agent-skills).</sub>
+- `✓ CI-verified` **[Agent-Reach: throwaway account, least privilege, scan before install](https://flowstacks.xyz/workflows/agent-reach-throwaway-and-scan)**<br/>
+  Before letting Agent-Reach install system dependencies and register a skill that logs into platforms with your cookies, encode the safe defaults as a preflight manifest: a throwaway account never your main, cookie-auth risk acknowledged per platform, and a mandatory scan before install.<br/><sub>**Stack:** [Agent-Reach](https://github.com/Panniantong/Agent-Reach), [SkillSpector](https://github.com/NVIDIA/SkillSpector).</sub>
 
 ## Content
 
@@ -253,6 +277,8 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
   From one brief, have an agent draft per-channel posts and queue a non-colliding weekly schedule in self-hosted Postiz.<br/><sub>**Stack:** [Postiz](https://postiz.com). _Replaces Buffer._</sub>
 - `✓ CI-verified` **[LibreChat + Fable 5: Show It a Screenshot or a PDF](https://flowstacks.xyz/workflows/librechat-fable5-vision-chat)**<br/>
   Run a private, self-hosted ChatGPT-style app where you drop in an image or document and let Claude Fable 5 read it.<br/><sub>**Stack:** [LibreChat](https://www.librechat.ai).</sub>
+- `✓ CI-verified` **[OpenMontage: run a full AI video pipeline with zero paid APIs](https://flowstacks.xyz/workflows/openmontage-free-video-pipeline)**<br/>
+  Wire OpenMontage's scripting-to-composition pipeline using only free sources (Piper TTS for narration, Archive.org/NASA/Wikimedia for footage, Pexels for images) so you pay nothing for the orchestration layer, and validate the pipeline config before you run it.<br/><sub>**Stack:** [OpenMontage](https://github.com/calesthio/OpenMontage).</sub>
 
 ---
 
@@ -262,8 +288,8 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 
 | Tool | Workflows |
 | --- | --- |
+| [Hermes Agent](https://hermes-agent.nousresearch.com) | 15 |
 | [Obsidian](https://obsidian.md) | 15 |
-| [Hermes Agent](https://nousresearch.com) | 13 |
 | [Claude Code](https://claude.com/claude-code) | 12 |
 | [Ollama](https://ollama.com) | 8 |
 | [Claude Desktop](https://claude.ai/download) | 7 |
@@ -279,21 +305,29 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [LM Studio](https://lmstudio.ai) | 3 |
 | [Pi](https://pi.dev) | 3 |
 | [Vercel](https://vercel.com) | 3 |
+| [E2B](https://e2b.dev) | 2 |
 | [Eve](https://vercel.com/docs/eve) | 2 |
+| [FreeLLMAPI](https://freellmapi.co) | 2 |
 | [GLM-5.2](https://huggingface.co/unsloth/GLM-5.2-GGUF) | 2 |
 | [Letta](https://www.letta.com) | 2 |
 | [Mnemosyne](https://github.com/AxDSan/mnemosyne) | 2 |
 | [obsidian-mcp](https://github.com/StevenStavrakis/obsidian-mcp) | 2 |
+| [SkillSpector](https://github.com/NVIDIA/SkillSpector) | 2 |
 | [Xiaomi MiMo](https://huggingface.co/XiaomiMiMo) | 2 |
+| [Agent Skills](https://github.com/addyosmani/agent-skills) | 1 |
+| [Agent-Reach](https://github.com/Panniantong/Agent-Reach) | 1 |
 | [Aider](https://aider.chat) | 1 |
 | [Cline](https://cline.bot) | 1 |
+| [codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp) | 1 |
 | [Cognee](https://www.cognee.ai) | 1 |
 | [Context7](https://context7.com) | 1 |
 | [Crawl4AI](https://crawl4ai.com) | 1 |
 | [Docusaurus](https://docusaurus.io) | 1 |
+| [DSPy](https://github.com/stanfordnlp/dspy) | 1 |
 | [Fabric](https://github.com/danielmiessler/fabric) | 1 |
 | [FalkorDB](https://falkordb.com) | 1 |
 | [Firecrawl](https://firecrawl.dev) | 1 |
+| [Flue](https://github.com/withastro/flue) | 1 |
 | [GNU Coreutils](https://www.gnu.org/software/coreutils/) | 1 |
 | [Graphiti](https://github.com/getzep/graphiti) | 1 |
 | [Hetzner VPS](https://hetzner.com) | 1 |
@@ -307,13 +341,16 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [NVIDIA Nemotron 3 Ultra](https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/) | 1 |
 | [Obsidian Local REST API](https://github.com/coddingtonbear/obsidian-local-rest-api) | 1 |
 | [OpenHands](https://docs.openhands.dev) | 1 |
+| [OpenMontage](https://github.com/calesthio/OpenMontage) | 1 |
 | [Outlines](https://github.com/dottxt-ai/outlines) | 1 |
 | PageIndex | 1 |
 | [Piper TTS](https://github.com/rhasspy/piper) | 1 |
 | [Postiz](https://postiz.com) | 1 |
+| [promptfoo](https://promptfoo.dev) | 1 |
 | [Repomix](https://repomix.com) | 1 |
 | [Sakana Fugu](https://sakana.ai/fugu/) | 1 |
 | [Scrapy](https://scrapy.org) | 1 |
+| [smolagents](https://huggingface.co/docs/smolagents) | 1 |
 | [Substack](https://substack.com) | 1 |
 | [Tencent Hy3](https://github.com/Tencent-Hunyuan/Hy3-preview) | 1 |
 | [tldraw](https://tldraw.dev) | 1 |
