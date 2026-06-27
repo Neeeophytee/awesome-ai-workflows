@@ -7,9 +7,9 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-103-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-94-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-105-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-96-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
-Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 94 of them are checked by CI on every change, not by hand.
+Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 96 of them are checked by CI on every change, not by hand.
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -27,7 +27,7 @@ Most lists hand you code that worked _once_. **Every recipe here links to a page
 
 A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Each entry links to **[FlowStacks](https://flowstacks.xyz)**, where you'll find the full setup steps, the exact stack, the cost, and the verification tier.
 
-**103 workflows · 94 machine-verified · 68 tools indexed.**
+**105 workflows · 96 machine-verified · 69 tools indexed.**
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI. When a step breaks, the badge drops. [How verification works](#how-verification-works)
 
@@ -39,11 +39,11 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Agents & Orchestration](#agents-orchestration) <sub>(37)</sub>
 - [RAG & Knowledge](#rag-knowledge) <sub>(10)</sub>
 - [Research](#research) <sub>(4)</sub>
-- [Automation](#automation) <sub>(9)</sub>
+- [Automation](#automation) <sub>(11)</sub>
 - [Local Inference](#local-inference) <sub>(11)</sub>
 - [Security](#security) <sub>(5)</sub>
 - [Content](#content) <sub>(3)</sub>
-- [Tools indexed](#tools-indexed) <sub>(68)</sub>
+- [Tools indexed](#tools-indexed) <sub>(69)</sub>
 - [How verification works](#how-verification-works)
 - [Contributing](#contributing)
 - [License](#license)
@@ -232,6 +232,10 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
   Author a Firecrawl extract request that returns schema-structured JSON (not just markdown) and validate the request shape before you spend a crawl on it.<br/><sub>**Stack:** [Firecrawl](https://firecrawl.dev).</sub>
 - `✓ CI-verified` **[Scrape politely: honor robots.txt and a crawl delay (the part most skip)](https://flowstacks.xyz/workflows/respectful-scraping-robots-ratelimit)**<br/>
   Gate any scraper behind a robots.txt check and a crawl delay so you only fetch what a site allows, at a rate it allows, using nothing but the Python standard library.<br/><sub>**Stack:** [Scrapy](https://scrapy.org).</sub>
+- `✓ CI-verified` **[Let a free model triage your reading: one-line summary + reply flag](https://flowstacks.xyz/workflows/openrouter-free-triage)**<br/>
+  Point any OpenAI-compatible tool at an OpenRouter free model so each email/article/report comes back as a one-sentence summary plus a needs-reply flag, and you only open what earns it.<br/><sub>**Stack:** [OpenRouter](https://openrouter.ai).</sub>
+- `✓ CI-verified` **[Teach OpenCode Go your weekly chore once, then run it in minutes](https://flowstacks.xyz/workflows/opencode-go-reusable-chore)**<br/>
+  Capture a repeating chore as a reusable OpenCode command backed by the Go plan's models, so a two-hour weekly task becomes a five-minute run.<br/><sub>**Stack:** [OpenCode](https://opencode.ai).</sub>
 
 ## Local Inference
 
@@ -295,7 +299,7 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [Claude Desktop](https://claude.ai/download) | 7 |
 | [MCPVault](https://github.com/bitbonsai/mcpvault) | 7 |
 | Codex (OpenAI) | 6 |
-| [OpenCode](https://opencode.ai) | 5 |
+| [OpenCode](https://opencode.ai) | 6 |
 | [Google Gemma 3](https://ollama.com/library/gemma3) | 4 |
 | [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog) | 4 |
 | [OrcaRouter](https://orcarouter.ai) | 4 |
@@ -342,6 +346,7 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [Obsidian Local REST API](https://github.com/coddingtonbear/obsidian-local-rest-api) | 1 |
 | [OpenHands](https://docs.openhands.dev) | 1 |
 | [OpenMontage](https://github.com/calesthio/OpenMontage) | 1 |
+| [OpenRouter](https://openrouter.ai) | 1 |
 | [Outlines](https://github.com/dottxt-ai/outlines) | 1 |
 | PageIndex | 1 |
 | [Piper TTS](https://github.com/rhasspy/piper) | 1 |
