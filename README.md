@@ -7,9 +7,9 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-105-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-96-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-106-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-97-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
-Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 96 of them are checked by CI on every change, not by hand.
+Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 97 of them are checked by CI on every change, not by hand.
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -27,7 +27,7 @@ Most lists hand you code that worked _once_. **Every recipe here links to a page
 
 A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Each entry links to **[FlowStacks](https://flowstacks.xyz)**, where you'll find the full setup steps, the exact stack, the cost, and the verification tier.
 
-**105 workflows · 96 machine-verified · 69 tools indexed.**
+**106 workflows · 97 machine-verified · 69 tools indexed.**
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI. When a step breaks, the badge drops. [How verification works](#how-verification-works)
 
@@ -36,7 +36,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 ## Contents
 
 - [Coding & Code Review](#coding-code-review) <sub>(24)</sub>
-- [Agents & Orchestration](#agents-orchestration) <sub>(37)</sub>
+- [Agents & Orchestration](#agents-orchestration) <sub>(38)</sub>
 - [RAG & Knowledge](#rag-knowledge) <sub>(10)</sub>
 - [Research](#research) <sub>(4)</sub>
 - [Automation](#automation) <sub>(11)</sub>
@@ -173,6 +173,8 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
   Execute AI-generated code in an isolated E2B cloud sandbox with the API key read from the environment, so untrusted code never touches your laptop or prod.<br/><sub>**Stack:** [E2B](https://e2b.dev).</sub>
 - `✓ CI-verified` **[promptfoo: make agent evals fail the build, not the user](https://flowstacks.xyz/workflows/promptfoo-evals-in-ci)**<br/>
   Write a declarative promptfoo config with real assertions and wire promptfoo eval into CI, so a regression in prompt or agent behavior fails a check instead of reaching production.<br/><sub>**Stack:** [promptfoo](https://promptfoo.dev).</sub>
+- `✓ CI-verified` **[Hermes MoA: stack frontier models into one virtual model for hard turns](https://flowstacks.xyz/workflows/hermes-moa-virtual-model)**<br/>
+  Configure a Mixture-of-Agents preset in Hermes so several models answer in parallel and an aggregator writes the final response, and validate the preset before you spend double the tokens on it.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com).</sub>
 - `author-tested` **[Self-Hosted Self-Improving Agent with Hermes](https://flowstacks.xyz/workflows/hermes-self-improving-agent)**<br/>
   Stand up a Hermes agent that remembers and improves over time on your own VPS.<br/><sub>**Stack:** [Hermes Agent](https://hermes-agent.nousresearch.com), [Hetzner VPS](https://hetzner.com), [Ollama](https://ollama.com).</sub>
 - `author-tested` **[Fine-Tune an Open LLM to Make It Yours](https://flowstacks.xyz/workflows/fine-tune-llm-make-it-yours)**<br/>
@@ -292,7 +294,7 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 
 | Tool | Workflows |
 | --- | --- |
-| [Hermes Agent](https://hermes-agent.nousresearch.com) | 15 |
+| [Hermes Agent](https://hermes-agent.nousresearch.com) | 16 |
 | [Obsidian](https://obsidian.md) | 15 |
 | [Claude Code](https://claude.com/claude-code) | 12 |
 | [Ollama](https://ollama.com) | 8 |
