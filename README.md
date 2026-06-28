@@ -7,9 +7,9 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-106-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-97-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](LICENSE) ![Recipes](https://img.shields.io/badge/recipes-107-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-98-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
-Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 97 of them are checked by CI on every change, not by hand.
+Most lists hand you code that worked _once_. **Every recipe here links to a page that shows whether it still works**, and 98 of them are checked by CI on every change, not by hand.
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -27,7 +27,7 @@ Most lists hand you code that worked _once_. **Every recipe here links to a page
 
 A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Each entry links to **[FlowStacks](https://flowstacks.xyz)**, where you'll find the full setup steps, the exact stack, the cost, and the verification tier.
 
-**106 workflows · 97 machine-verified · 69 tools indexed.**
+**107 workflows · 98 machine-verified · 69 tools indexed.**
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI. When a step breaks, the badge drops. [How verification works](#how-verification-works)
 
@@ -35,7 +35,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 
 ## Contents
 
-- [Coding & Code Review](#coding-code-review) <sub>(24)</sub>
+- [Coding & Code Review](#coding-code-review) <sub>(25)</sub>
 - [Agents & Orchestration](#agents-orchestration) <sub>(38)</sub>
 - [RAG & Knowledge](#rag-knowledge) <sub>(10)</sub>
 - [Research](#research) <sub>(4)</sub>
@@ -98,6 +98,8 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
   Fan a hard coding task out to a panel and keep the candidate whose patch actually passes your tests, using the tests_pass arbiter.<br/><sub>**Stack:** [OrcaRouter](https://orcarouter.ai).</sub>
 - `✓ CI-verified` **[codebase-memory-mcp: wire the knowledge graph, stop re-reading files](https://flowstacks.xyz/workflows/codebase-memory-mcp-token-savings)**<br/>
   Point your MCP client at a codebase-memory-mcp server so your coding agent queries the repo's knowledge graph instead of re-reading files into context on every question, cutting token spend without changing answer quality.<br/><sub>**Stack:** [codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp).</sub>
+- `✓ CI-verified` **[Run GLM-5.2 for the bulk, escalate the hard turns to Opus 4.8](https://flowstacks.xyz/workflows/glm-52-route-bulk-escalate-opus)**<br/>
+  Wire a cost-routing config that sends most work to cheap hosted GLM-5.2 and only the hardest turns to Opus 4.8, instead of paying Opus prices for everything.<br/><sub>**Stack:** [GLM-5.2](https://huggingface.co/unsloth/GLM-5.2-GGUF), [OpenRouter](https://openrouter.ai).</sub>
 - `author-tested` **[Persistent Memory for Codex using Obsidian](https://flowstacks.xyz/workflows/persistent-memory-codex-obsidian)**<br/>
   Give Codex durable, searchable long-term memory backed by an Obsidian vault.<br/><sub>**Stack:** Codex (OpenAI), [Obsidian](https://obsidian.md).</sub>
 
@@ -307,6 +309,7 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [OrcaRouter](https://orcarouter.ai) | 4 |
 | [vLLM](https://github.com/vllm-project/vllm) | 4 |
 | DeepSeek V4 | 3 |
+| [GLM-5.2](https://huggingface.co/unsloth/GLM-5.2-GGUF) | 3 |
 | [Kilo Code](https://kilocode.ai) | 3 |
 | [LM Studio](https://lmstudio.ai) | 3 |
 | [Pi](https://pi.dev) | 3 |
@@ -314,10 +317,10 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [E2B](https://e2b.dev) | 2 |
 | [Eve](https://vercel.com/docs/eve) | 2 |
 | [FreeLLMAPI](https://freellmapi.co) | 2 |
-| [GLM-5.2](https://huggingface.co/unsloth/GLM-5.2-GGUF) | 2 |
 | [Letta](https://www.letta.com) | 2 |
 | [Mnemosyne](https://github.com/AxDSan/mnemosyne) | 2 |
 | [obsidian-mcp](https://github.com/StevenStavrakis/obsidian-mcp) | 2 |
+| [OpenRouter](https://openrouter.ai) | 2 |
 | [SkillSpector](https://github.com/NVIDIA/SkillSpector) | 2 |
 | [Xiaomi MiMo](https://huggingface.co/XiaomiMiMo) | 2 |
 | [Agent Skills](https://github.com/addyosmani/agent-skills) | 1 |
@@ -348,7 +351,6 @@ The open-source tools these workflows are built on. Maintainers: if your tool is
 | [Obsidian Local REST API](https://github.com/coddingtonbear/obsidian-local-rest-api) | 1 |
 | [OpenHands](https://docs.openhands.dev) | 1 |
 | [OpenMontage](https://github.com/calesthio/OpenMontage) | 1 |
-| [OpenRouter](https://openrouter.ai) | 1 |
 | [Outlines](https://github.com/dottxt-ai/outlines) | 1 |
 | PageIndex | 1 |
 | [Piper TTS](https://github.com/rhasspy/piper) | 1 |
