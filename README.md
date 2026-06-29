@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-107-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-98-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-108-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-99-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 98 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 99 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -148,6 +148,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Serve MiniMax M3 yourself for agentic coding (vLLM)](https://flowstacks.xyz/workflows/serve-minimax-m3-coding) - Stand up MiniMax M3 on an 8x H200 node as an OpenAI-compatible endpoint and point any coding agent at it, validated serve flags + endpoint config. `✓ CI-verified`. Stack: vLLM, MiniMax M3.
 - [Serve GLM-5.1 yourself for long-horizon agentic coding (vLLM)](https://flowstacks.xyz/workflows/serve-glm-51-coding) - Stand up the MIT-licensed GLM-5.1 FP8 checkpoint as an OpenAI-compatible endpoint for long agentic runs, validated serve config + endpoint. `✓ CI-verified`. Stack: vLLM, GLM-5.2.
 - [Serve NVIDIA Nemotron 3 Ultra yourself for high-throughput agents (vLLM)](https://flowstacks.xyz/workflows/serve-nemotron-3-ultra-coding) - Stand up the NVFP4 Nemotron 3 Ultra checkpoint as an OpenAI-compatible endpoint for fast, long-running agent loops, validated serve flags + endpoint. `✓ CI-verified`. Stack: vLLM, NVIDIA Nemotron 3 Ultra.
+- [Validate an Apple Core AI export entry and skill plugin before you touch a Mac](https://flowstacks.xyz/workflows/coreai-export-registry-and-plugin-check) - Check a Core AI model registry entry and the agent-skill plugin manifest offline, so you know the export recipe is well-formed before spending an evening on macOS 27. `✓ CI-verified`. Stack: Apple Core AI Models.
 - [Local Voice-to-Text that Replaces WisprFlow](https://flowstacks.xyz/workflows/local-voice-to-text-replace-wisprflow) - Run fully local dictation with whisper.cpp instead of paying for WisprFlow. `author-tested`. Stack: whisper.cpp. Replaces WisprFlow.
 - [Local Text-to-Speech that Replaces ElevenLabs](https://flowstacks.xyz/workflows/local-tts-replace-elevenlabs) - Generate natural speech locally with Piper instead of an ElevenLabs subscription. `author-tested`. Stack: Piper TTS. Replaces ElevenLabs.
 - [Run LLMs Locally to Replace ChatGPT Plus](https://flowstacks.xyz/workflows/run-llms-locally-replace-chatgpt-plus) - Serve a capable open model locally with Ollama and drop the ChatGPT Plus subscription. `author-tested`. Stack: Ollama, DeepSeek V4. Replaces ChatGPT Plus.
@@ -201,6 +202,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [Agent Skills](https://github.com/addyosmani/agent-skills) - Used in 1 workflow.
 - [Agent-Reach](https://github.com/Panniantong/Agent-Reach) - Used in 1 workflow.
 - [Aider](https://aider.chat) - Used in 1 workflow.
+- [Apple Core AI Models](https://github.com/apple/coreai-models) - Used in 1 workflow.
 - [Cline](https://cline.bot) - Used in 1 workflow.
 - [codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp) - Used in 1 workflow.
 - [Cognee](https://www.cognee.ai) - Used in 1 workflow.
