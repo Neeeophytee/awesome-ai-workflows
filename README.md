@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-108-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-99-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-110-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-101-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 99 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 101 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -123,6 +123,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Obsidian × MCPVault: The Decision Journal](https://flowstacks.xyz/workflows/mcpvault-decision-journal) - Log decisions with frontmatter, let Claude update the outcome safely, and read the patterns each quarter. `✓ CI-verified`. Stack: Obsidian, MCPVault, Claude Desktop.
 - [Fabric + Fable 5: Get Through Your Reading Pile](https://flowstacks.xyz/workflows/fabric-fable5-reading-patterns) - Pipe any article, video transcript, or document into a prebuilt Fabric pattern and have Fable 5 summarize, extract, or analyze it in one line. `✓ CI-verified`. Stack: Fabric.
 - [Track a tool's hype curve across any Substack (no API key)](https://flowstacks.xyz/workflows/substack-hype-tracker) - Count how often a tool or model is mentioned in a Substack's posts over time, so you can see a hype curve rise and fade, using only the public archive. `✓ CI-verified`. Stack: Substack.
+- [Pick a model with evidence: a GitHub Models bake-off that fits the free cap](https://flowstacks.xyz/workflows/github-models-prompt-bakeoff) - Run the few prompts that actually matter across several models on GitHub Models' free tier, then keep the winner, with the daily call budget proven to fit before you start. `✓ CI-verified`. Stack: GitHub Models.
 - [Hermes + NotebookLM "Second Brain"](https://flowstacks.xyz/workflows/hermes-notebooklm-second-brain) - Pair Hermes with NotebookLM to build a self-researching, self-teaching knowledge system. `author-tested`. Stack: Hermes Agent, NotebookLM, Obsidian. Replaces Perplexity Pro.
 
 ## Automation
@@ -138,6 +139,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Scrape politely: honor robots.txt and a crawl delay (the part most skip)](https://flowstacks.xyz/workflows/respectful-scraping-robots-ratelimit) - Gate any scraper behind a robots.txt check and a crawl delay so you only fetch what a site allows, at a rate it allows, using nothing but the Python standard library. `✓ CI-verified`. Stack: Scrapy.
 - [Let a free model triage your reading: one-line summary + reply flag](https://flowstacks.xyz/workflows/openrouter-free-triage) - Point any OpenAI-compatible tool at an OpenRouter free model so each email/article/report comes back as a one-sentence summary plus a needs-reply flag, and you only open what earns it. `✓ CI-verified`. Stack: OpenRouter.
 - [Teach OpenCode Go your weekly chore once, then run it in minutes](https://flowstacks.xyz/workflows/opencode-go-reusable-chore) - Capture a repeating chore as a reusable OpenCode command backed by the Go plan's models, so a two-hour weekly task becomes a five-minute run. `✓ CI-verified`. Stack: OpenCode.
+- [Grind a huge one-time job overnight on a free tier's tiny rate limit](https://flowstacks.xyz/workflows/free-tier-overnight-batch) - Pace a big one-time batch (label a dataset, summarize an archive, draft alt text) through a free tier with a very low rate ceiling, proven to finish within the rate limit and the monthly token budget before you start it. `✓ CI-verified`. Stack: Mistral La Plateforme.
 
 ## Local Inference
 
@@ -214,6 +216,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [FalkorDB](https://falkordb.com) - Used in 1 workflow.
 - [Firecrawl](https://firecrawl.dev) - Used in 1 workflow.
 - [Flue](https://github.com/withastro/flue) - Used in 1 workflow.
+- [GitHub Models](https://github.com/marketplace/models) - Used in 1 workflow.
 - [GNU Coreutils](https://www.gnu.org/software/coreutils/) - Used in 1 workflow.
 - [Graphiti](https://github.com/getzep/graphiti) - Used in 1 workflow.
 - [Hetzner VPS](https://hetzner.com) - Used in 1 workflow.
@@ -222,6 +225,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [mcp-obsidian](https://github.com/MarkusPfundstein/mcp-obsidian) - Used in 1 workflow.
 - [Mem0](https://mem0.ai) - Used in 1 workflow.
 - [MiniMax M3](https://huggingface.co/MiniMaxAI/MiniMax-M3) - Used in 1 workflow.
+- [Mistral La Plateforme](https://mistral.ai) - Used in 1 workflow.
 - [Next.js](https://nextjs.org) - Used in 1 workflow.
 - [NotebookLM](https://notebooklm.google.com) - Used in 1 workflow.
 - [NVIDIA Nemotron 3 Ultra](https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/) - Used in 1 workflow.
