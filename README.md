@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-110-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-101-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-111-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-102-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 101 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 102 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -169,6 +169,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Postiz: Plan and Schedule a Week of Social Posts](https://flowstacks.xyz/workflows/postiz-plan-a-week-of-social-posts) - From one brief, have an agent draft per-channel posts and queue a non-colliding weekly schedule in self-hosted Postiz. `✓ CI-verified`. Stack: Postiz. Replaces Buffer.
 - [LibreChat + Fable 5: Show It a Screenshot or a PDF](https://flowstacks.xyz/workflows/librechat-fable5-vision-chat) - Run a private, self-hosted ChatGPT-style app where you drop in an image or document and let Claude Fable 5 read it. `✓ CI-verified`. Stack: LibreChat.
 - [OpenMontage: run a full AI video pipeline with zero paid APIs](https://flowstacks.xyz/workflows/openmontage-free-video-pipeline) - Wire OpenMontage's scripting-to-composition pipeline using only free sources (Piper TTS for narration, Archive.org/NASA/Wikimedia for footage, Pexels for images) so you pay nothing for the orchestration layer, and validate the pipeline config before you run it. `✓ CI-verified`. Stack: OpenMontage.
+- [Swap to a cheap image model, but guard the cases it loses](https://flowstacks.xyz/workflows/image-gen-cheap-swap-with-text-guard) - Default image generation to a cheap model for general scenes, while proving the cases the premium model dominates (text in the frame, charts, precise layout) are still routed to it, so the swap saves money without quietly degrading the work that has words in it. `✓ CI-verified`. Stack: Wan (Alibaba).
 
 ## Tools indexed
 
@@ -245,6 +246,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [Tencent Hy3](https://github.com/Tencent-Hunyuan/Hy3-preview) - Used in 1 workflow.
 - [tldraw](https://tldraw.dev) - Used in 1 workflow.
 - [Vite](https://vite.dev) - Used in 1 workflow.
+- [Wan (Alibaba)](https://wan.video) - Used in 1 workflow.
 - [whisper.cpp](https://github.com/ggerganov/whisper.cpp) - Used in 1 workflow.
 
 ## How verification works
