@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-111-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-102-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-115-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-106-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 102 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 106 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -102,6 +102,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [E2B: run model-written code in a sandbox, not on your box](https://flowstacks.xyz/workflows/e2b-sandbox-untrusted-code) - Execute AI-generated code in an isolated E2B cloud sandbox with the API key read from the environment, so untrusted code never touches your laptop or prod. `✓ CI-verified`. Stack: E2B.
 - [promptfoo: make agent evals fail the build, not the user](https://flowstacks.xyz/workflows/promptfoo-evals-in-ci) - Write a declarative promptfoo config with real assertions and wire promptfoo eval into CI, so a regression in prompt or agent behavior fails a check instead of reaching production. `✓ CI-verified`. Stack: promptfoo.
 - [Hermes MoA: stack frontier models into one virtual model for hard turns](https://flowstacks.xyz/workflows/hermes-moa-virtual-model) - Configure a Mixture-of-Agents preset in Hermes so several models answer in parallel and an aggregator writes the final response, and validate the preset before you spend double the tokens on it. `✓ CI-verified`. Stack: Hermes Agent.
+- [Voyager pattern: validate a procedural skill store before you trust a saved skill](https://flowstacks.xyz/workflows/voyager-skill-library-pattern) - Capture a working routine as a named, described skill entry and validate the skill-library structure, so saved skills are findable and reviewable before an agent reuses them. `✓ CI-verified`. Stack: Voyager.
 - [Self-Hosted Self-Improving Agent with Hermes](https://flowstacks.xyz/workflows/hermes-self-improving-agent) - Stand up a Hermes agent that remembers and improves over time on your own VPS. `author-tested`. Stack: Hermes Agent, Hetzner VPS, Ollama.
 - [Fine-Tune an Open LLM to Make It Yours](https://flowstacks.xyz/workflows/fine-tune-llm-make-it-yours) - Adapt an open-weight model to your domain with a small dataset. `author-tested`. Stack: vLLM.
 
@@ -116,6 +117,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Cognee: Knowledge-Graph Memory Over Your Documents](https://flowstacks.xyz/workflows/cognee-knowledge-graph-memory) - Ingest your documents into a vector index plus a knowledge graph, so an agent can search by meaning and by relationships. `✓ CI-verified`. Stack: Cognee.
 - [Khoj + Fable 5: A Second Brain That Knows Your Notes](https://flowstacks.xyz/workflows/khoj-fable5-second-brain) - Point a self-hosted assistant at your documents so Fable 5 can answer from your own notes, not just the internet. `✓ CI-verified`. Stack: Khoj.
 - [Crawl4AI: a page to clean, LLM-ready markdown (no API key)](https://flowstacks.xyz/workflows/crawl4ai-markdown-for-llm) - Write a Crawl4AI run script that turns a page into clean markdown with a cache mode set, and verify the script is valid and shaped right before you point it at a site. `✓ CI-verified`. Stack: Crawl4AI.
+- [LlamaIndex: index your documents and query them at runtime](https://flowstacks.xyz/workflows/llamaindex-retrieval-memory-rag) - Point LlamaIndex at a document corpus and build a VectorStoreIndex so an agent can retrieve the relevant chunks at query time instead of stuffing everything into context. `✓ CI-verified`. Stack: LlamaIndex.
 - [Vectorless RAG with PageIndex](https://flowstacks.xyz/workflows/vectorless-rag-pageindex) - Build high-accuracy RAG without embeddings, chunking, or a vector DB. `author-tested`. Stack: PageIndex, Ollama, DeepSeek V4.
 
 ## Research
@@ -140,6 +142,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Let a free model triage your reading: one-line summary + reply flag](https://flowstacks.xyz/workflows/openrouter-free-triage) - Point any OpenAI-compatible tool at an OpenRouter free model so each email/article/report comes back as a one-sentence summary plus a needs-reply flag, and you only open what earns it. `✓ CI-verified`. Stack: OpenRouter.
 - [Teach OpenCode Go your weekly chore once, then run it in minutes](https://flowstacks.xyz/workflows/opencode-go-reusable-chore) - Capture a repeating chore as a reusable OpenCode command backed by the Go plan's models, so a two-hour weekly task becomes a five-minute run. `✓ CI-verified`. Stack: OpenCode.
 - [Grind a huge one-time job overnight on a free tier's tiny rate limit](https://flowstacks.xyz/workflows/free-tier-overnight-batch) - Pace a big one-time batch (label a dataset, summarize an archive, draft alt text) through a free tier with a very low rate ceiling, proven to finish within the rate limit and the monthly token budget before you start it. `✓ CI-verified`. Stack: Mistral La Plateforme.
+- [ReMe pattern: define prospective memory as a schedule your agent can tick off](https://flowstacks.xyz/workflows/reme-prospective-schedule) - Write a reminder schedule config that an agent can load to surface its own future obligations — follow-ups, timed checks, recurring digests — and validate the structure before wiring it up. `✓ CI-verified`. Stack: ReMe.
 
 ## Local Inference
 
@@ -151,6 +154,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Serve GLM-5.1 yourself for long-horizon agentic coding (vLLM)](https://flowstacks.xyz/workflows/serve-glm-51-coding) - Stand up the MIT-licensed GLM-5.1 FP8 checkpoint as an OpenAI-compatible endpoint for long agentic runs, validated serve config + endpoint. `✓ CI-verified`. Stack: vLLM, GLM-5.2.
 - [Serve NVIDIA Nemotron 3 Ultra yourself for high-throughput agents (vLLM)](https://flowstacks.xyz/workflows/serve-nemotron-3-ultra-coding) - Stand up the NVFP4 Nemotron 3 Ultra checkpoint as an OpenAI-compatible endpoint for fast, long-running agent loops, validated serve flags + endpoint. `✓ CI-verified`. Stack: vLLM, NVIDIA Nemotron 3 Ultra.
 - [Validate an Apple Core AI export entry and skill plugin before you touch a Mac](https://flowstacks.xyz/workflows/coreai-export-registry-and-plugin-check) - Check a Core AI model registry entry and the agent-skill plugin manifest offline, so you know the export recipe is well-formed before spending an evening on macOS 27. `✓ CI-verified`. Stack: Apple Core AI Models.
+- [Unsloth: write parametric memory in with a fine-tune config](https://flowstacks.xyz/workflows/unsloth-parametric-finetune-config) - Write a valid Unsloth fine-tune config that bakes stable, always-needed domain knowledge into a small model so the knowledge is native rather than carried in a prompt on every call. `✓ CI-verified`. Stack: Unsloth.
 - [Local Voice-to-Text that Replaces WisprFlow](https://flowstacks.xyz/workflows/local-voice-to-text-replace-wisprflow) - Run fully local dictation with whisper.cpp instead of paying for WisprFlow. `author-tested`. Stack: whisper.cpp. Replaces WisprFlow.
 - [Local Text-to-Speech that Replaces ElevenLabs](https://flowstacks.xyz/workflows/local-tts-replace-elevenlabs) - Generate natural speech locally with Piper instead of an ElevenLabs subscription. `author-tested`. Stack: Piper TTS. Replaces ElevenLabs.
 - [Run LLMs Locally to Replace ChatGPT Plus](https://flowstacks.xyz/workflows/run-llms-locally-replace-chatgpt-plus) - Serve a capable open model locally with Ollama and drop the ChatGPT Plus subscription. `author-tested`. Stack: Ollama, DeepSeek V4. Replaces ChatGPT Plus.
@@ -223,6 +227,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [Hetzner VPS](https://hetzner.com) - Used in 1 workflow.
 - [Khoj](https://khoj.dev) - Used in 1 workflow.
 - [LibreChat](https://www.librechat.ai) - Used in 1 workflow.
+- [LlamaIndex](https://www.llamaindex.ai) - Used in 1 workflow.
 - [mcp-obsidian](https://github.com/MarkusPfundstein/mcp-obsidian) - Used in 1 workflow.
 - [Mem0](https://mem0.ai) - Used in 1 workflow.
 - [MiniMax M3](https://huggingface.co/MiniMaxAI/MiniMax-M3) - Used in 1 workflow.
@@ -238,6 +243,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [Piper TTS](https://github.com/rhasspy/piper) - Used in 1 workflow.
 - [Postiz](https://postiz.com) - Used in 1 workflow.
 - [promptfoo](https://promptfoo.dev) - Used in 1 workflow.
+- [ReMe](https://github.com/agentscope-ai/ReMe) - Used in 1 workflow.
 - [Repomix](https://repomix.com) - Used in 1 workflow.
 - [Sakana Fugu](https://sakana.ai/fugu/) - Used in 1 workflow.
 - [Scrapy](https://scrapy.org) - Used in 1 workflow.
@@ -245,7 +251,9 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [Substack](https://substack.com) - Used in 1 workflow.
 - [Tencent Hy3](https://github.com/Tencent-Hunyuan/Hy3-preview) - Used in 1 workflow.
 - [tldraw](https://tldraw.dev) - Used in 1 workflow.
+- [Unsloth](https://unsloth.ai) - Used in 1 workflow.
 - [Vite](https://vite.dev) - Used in 1 workflow.
+- [Voyager](https://github.com/MineDojo/Voyager) - Used in 1 workflow.
 - [Wan (Alibaba)](https://wan.video) - Used in 1 workflow.
 - [whisper.cpp](https://github.com/ggerganov/whisper.cpp) - Used in 1 workflow.
 
