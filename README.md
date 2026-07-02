@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-115-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-106-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-116-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-107-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 106 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 107 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -143,6 +143,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Teach OpenCode Go your weekly chore once, then run it in minutes](https://flowstacks.xyz/workflows/opencode-go-reusable-chore) - Capture a repeating chore as a reusable OpenCode command backed by the Go plan's models, so a two-hour weekly task becomes a five-minute run. `✓ CI-verified`. Stack: OpenCode.
 - [Grind a huge one-time job overnight on a free tier's tiny rate limit](https://flowstacks.xyz/workflows/free-tier-overnight-batch) - Pace a big one-time batch (label a dataset, summarize an archive, draft alt text) through a free tier with a very low rate ceiling, proven to finish within the rate limit and the monthly token budget before you start it. `✓ CI-verified`. Stack: Mistral La Plateforme.
 - [ReMe pattern: define prospective memory as a schedule your agent can tick off](https://flowstacks.xyz/workflows/reme-prospective-schedule) - Write a reminder schedule config that an agent can load to surface its own future obligations — follow-ups, timed checks, recurring digests — and validate the structure before wiring it up. `✓ CI-verified`. Stack: ReMe.
+- [Route through a gateway with a tested open-weights fallback](https://flowstacks.xyz/workflows/model-failover-tested-open-fallback) - Keep model access from being a single point of failure: route through an OpenAI-compatible gateway and pin a fallback that is open-weights and has actually been tested, so a pulled or deprecated model is a two-minute config change, not a lost week. `✓ CI-verified`.
 
 ## Local Inference
 
