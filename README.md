@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-117-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-108-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-118-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-109-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 108 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 109 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -127,6 +127,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Fabric + Fable 5: Get Through Your Reading Pile](https://flowstacks.xyz/workflows/fabric-fable5-reading-patterns) - Pipe any article, video transcript, or document into a prebuilt Fabric pattern and have Fable 5 summarize, extract, or analyze it in one line. `✓ CI-verified`. Stack: Fabric.
 - [Track a tool's hype curve across any Substack (no API key)](https://flowstacks.xyz/workflows/substack-hype-tracker) - Count how often a tool or model is mentioned in a Substack's posts over time, so you can see a hype curve rise and fade, using only the public archive. `✓ CI-verified`. Stack: Substack.
 - [Pick a model with evidence: a GitHub Models bake-off that fits the free cap](https://flowstacks.xyz/workflows/github-models-prompt-bakeoff) - Run the few prompts that actually matter across several models on GitHub Models' free tier, then keep the winner, with the daily call budget proven to fit before you start. `✓ CI-verified`. Stack: GitHub Models.
+- [Read your token receipts right: volume and cost are different leaderboards](https://flowstacks.xyz/workflows/token-volume-vs-cost-receipts) - Attribute your model usage by both tokens and dollars, so you can see the flip the OpenRouter rankings show: cheap open models dominate volume while premium models dominate spend, and never mistake a high token ranking for value. `✓ CI-verified`. Stack: OpenRouter.
 - [Hermes + NotebookLM "Second Brain"](https://flowstacks.xyz/workflows/hermes-notebooklm-second-brain) - Pair Hermes with NotebookLM to build a self-researching, self-teaching knowledge system. `author-tested`. Stack: Hermes Agent, NotebookLM, Obsidian. Replaces Perplexity Pro.
 
 ## Automation
@@ -197,6 +198,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [GLM-5.2](https://huggingface.co/unsloth/GLM-5.2-GGUF) - Used in 3 workflows.
 - [Kilo Code](https://kilocode.ai) - Used in 3 workflows.
 - [LM Studio](https://lmstudio.ai) - Used in 3 workflows.
+- [OpenRouter](https://openrouter.ai) - Used in 3 workflows.
 - [Pi](https://pi.dev) - Used in 3 workflows.
 - [Vercel](https://vercel.com) - Used in 3 workflows.
 - [E2B](https://e2b.dev) - Used in 2 workflows.
@@ -205,7 +207,6 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [Letta](https://www.letta.com) - Used in 2 workflows.
 - [Mnemosyne](https://github.com/AxDSan/mnemosyne) - Used in 2 workflows.
 - [obsidian-mcp](https://github.com/StevenStavrakis/obsidian-mcp) - Used in 2 workflows.
-- [OpenRouter](https://openrouter.ai) - Used in 2 workflows.
 - [SkillSpector](https://github.com/NVIDIA/SkillSpector) - Used in 2 workflows.
 - [Xiaomi MiMo](https://huggingface.co/XiaomiMiMo) - Used in 2 workflows.
 - [Agent Skills](https://github.com/addyosmani/agent-skills) - Used in 1 workflow.
