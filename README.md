@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-119-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-110-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-120-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-111-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 110 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 111 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -171,6 +171,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [SkillSpector: fail your CI build on a risky agent skill](https://flowstacks.xyz/workflows/skillspector-ci-gate) - Scan every skill you did not write with SkillSpector and gate CI on the result, so a malicious or vulnerable SKILL.md fails the build instead of running with your agent's permissions at runtime. `✓ CI-verified`. Stack: SkillSpector.
 - [Vet a SKILL.md before you install it](https://flowstacks.xyz/workflows/vet-agent-skill-before-install) - Treat an agent skill like the untrusted dependency it is: parse its SKILL.md, confirm the frontmatter is well-formed, and surface every executable script it bundles, since the research flagged script-bearing skills as the most dangerous, before you ever let your agent run it. `✓ CI-verified`. Stack: Agent Skills.
 - [Agent-Reach: throwaway account, least privilege, scan before install](https://flowstacks.xyz/workflows/agent-reach-throwaway-and-scan) - Before letting Agent-Reach install system dependencies and register a skill that logs into platforms with your cookies, encode the safe defaults as a preflight manifest: a throwaway account never your main, cookie-auth risk acknowledged per platform, and a mandatory scan before install. `✓ CI-verified`. Stack: Agent-Reach, SkillSpector.
+- [Vet the fine print a star count hides: real license and a gate on dual-use tools](https://flowstacks.xyz/workflows/vet-the-fine-print-before-you-build) - Before you build on a starred repo, record its actual license (not an assumed permissive one) and whether it is dual-use, so a custom license or an impersonation risk never surprises you after you have shipped. `✓ CI-verified`. Stack: MinerU.
 
 ## Content
 
@@ -234,6 +235,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [LlamaIndex](https://www.llamaindex.ai) - Used in 1 workflow.
 - [mcp-obsidian](https://github.com/MarkusPfundstein/mcp-obsidian) - Used in 1 workflow.
 - [Mem0](https://mem0.ai) - Used in 1 workflow.
+- [MinerU](https://mineru.net) - Used in 1 workflow.
 - [MiniMax M3](https://huggingface.co/MiniMaxAI/MiniMax-M3) - Used in 1 workflow.
 - [Mistral La Plateforme](https://mistral.ai) - Used in 1 workflow.
 - [Next.js](https://nextjs.org) - Used in 1 workflow.
