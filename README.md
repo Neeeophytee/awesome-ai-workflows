@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-120-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-111-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-122-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-113-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 111 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 113 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -120,6 +120,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Khoj + Fable 5: A Second Brain That Knows Your Notes](https://flowstacks.xyz/workflows/khoj-fable5-second-brain) - Point a self-hosted assistant at your documents so Fable 5 can answer from your own notes, not just the internet. `✓ CI-verified`. Stack: Khoj.
 - [Crawl4AI: a page to clean, LLM-ready markdown (no API key)](https://flowstacks.xyz/workflows/crawl4ai-markdown-for-llm) - Write a Crawl4AI run script that turns a page into clean markdown with a cache mode set, and verify the script is valid and shaped right before you point it at a site. `✓ CI-verified`. Stack: Crawl4AI.
 - [LlamaIndex: index your documents and query them at runtime](https://flowstacks.xyz/workflows/llamaindex-retrieval-memory-rag) - Point LlamaIndex at a document corpus and build a VectorStoreIndex so an agent can retrieve the relevant chunks at query time instead of stuffing everything into context. `✓ CI-verified`. Stack: LlamaIndex.
+- [zvec: run vector search inside your app, no server, offline](https://flowstacks.xyz/workflows/zvec-in-process-vector-search) - Embed a vector database directly into your process with zvec, insert vectors, and query for nearest neighbors, with no separate server to run, config, or babysit. `✓ CI-verified`. Stack: zvec.
 - [Vectorless RAG with PageIndex](https://flowstacks.xyz/workflows/vectorless-rag-pageindex) - Build high-accuracy RAG without embeddings, chunking, or a vector DB. `author-tested`. Stack: PageIndex, Ollama, DeepSeek V4.
 
 ## Research
@@ -172,6 +173,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Vet a SKILL.md before you install it](https://flowstacks.xyz/workflows/vet-agent-skill-before-install) - Treat an agent skill like the untrusted dependency it is: parse its SKILL.md, confirm the frontmatter is well-formed, and surface every executable script it bundles, since the research flagged script-bearing skills as the most dangerous, before you ever let your agent run it. `✓ CI-verified`. Stack: Agent Skills.
 - [Agent-Reach: throwaway account, least privilege, scan before install](https://flowstacks.xyz/workflows/agent-reach-throwaway-and-scan) - Before letting Agent-Reach install system dependencies and register a skill that logs into platforms with your cookies, encode the safe defaults as a preflight manifest: a throwaway account never your main, cookie-auth risk acknowledged per platform, and a mandatory scan before install. `✓ CI-verified`. Stack: Agent-Reach, SkillSpector.
 - [Vet the fine print a star count hides: real license and a gate on dual-use tools](https://flowstacks.xyz/workflows/vet-the-fine-print-before-you-build) - Before you build on a starred repo, record its actual license (not an assumed permissive one) and whether it is dual-use, so a custom license or an impersonation risk never surprises you after you have shipped. `✓ CI-verified`. Stack: MinerU.
+- [Shepherd: prove an agent task is retained and least-privilege before it runs](https://flowstacks.xyz/workflows/shepherd-least-privilege-grants) - Declare an agent task's per-repo read/write grants and hold its output to one side (retained, not applied), then validate that nothing auto-applies and every write grant is explicit, before you run it. `✓ CI-verified`. Stack: Shepherd.
 
 ## Content
 
@@ -253,6 +255,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [Repomix](https://repomix.com) - Used in 1 workflow.
 - [Sakana Fugu](https://sakana.ai/fugu/) - Used in 1 workflow.
 - [Scrapy](https://scrapy.org) - Used in 1 workflow.
+- [Shepherd](https://shepherd-agents.ai) - Used in 1 workflow.
 - [smolagents](https://huggingface.co/docs/smolagents) - Used in 1 workflow.
 - [Substack](https://substack.com) - Used in 1 workflow.
 - [Tencent Hy3](https://github.com/Tencent-Hunyuan/Hy3-preview) - Used in 1 workflow.
@@ -263,6 +266,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [Wan (Alibaba)](https://wan.video) - Used in 1 workflow.
 - [WebMCP](https://developer.chrome.com/docs/ai/webmcp) - Used in 1 workflow.
 - [whisper.cpp](https://github.com/ggerganov/whisper.cpp) - Used in 1 workflow.
+- [zvec](https://zvec.org) - Used in 1 workflow.
 
 ## How verification works
 
