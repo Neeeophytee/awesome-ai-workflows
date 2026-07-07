@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-122-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-113-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-123-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-114-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 113 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 114 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -105,6 +105,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Voyager pattern: validate a procedural skill store before you trust a saved skill](https://flowstacks.xyz/workflows/voyager-skill-library-pattern) - Capture a working routine as a named, described skill entry and validate the skill-library structure, so saved skills are findable and reviewable before an agent reuses them. `✓ CI-verified`. Stack: Voyager.
 - [Wire GLM-5.2 into Hermes: valid route, 64k-context check, no key in config](https://flowstacks.xyz/workflows/hermes-glm-52-provider-config) - Validate a Hermes Agent config that runs GLM-5.2 through a real provider route (direct Z.AI or OpenRouter), clears Hermes's 64k minimum context, and keeps the API key out of config.yaml, before you start a session. `✓ CI-verified`.
 - [WebMCP: declare a site's agent tools, and gate the ones that spend money](https://flowstacks.xyz/workflows/webmcp-tool-manifest-confirm-gate) - Publish a WebMCP tool manifest so an agent calls named site tools instead of guessing at buttons, and validate that every tool has a real schema and every sensitive tool (pay, checkout, delete) requires a human confirmation before it runs. `✓ CI-verified`. Stack: WebMCP.
+- [Verify an agent-skills plugin before you ship or install it](https://flowstacks.xyz/workflows/verify-a-skills-plugin-before-you-ship) - Check that a Claude Code / agentskills.io skills package is structurally valid, every SKILL.md has proper frontmatter and a name matching its folder, and the plugin marketplace manifest parses, so a broken skill never fails to load after you publish it. `✓ CI-verified`. Stack: Agent Skills.
 - [Self-Hosted Self-Improving Agent with Hermes](https://flowstacks.xyz/workflows/hermes-self-improving-agent) - Stand up a Hermes agent that remembers and improves over time on your own VPS. `author-tested`. Stack: Hermes Agent, Hetzner VPS, Ollama.
 - [Fine-Tune an Open LLM to Make It Yours](https://flowstacks.xyz/workflows/fine-tune-llm-make-it-yours) - Adapt an open-weight model to your domain with a small dataset. `author-tested`. Stack: vLLM.
 
@@ -205,6 +206,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [OpenRouter](https://openrouter.ai) - Used in 3 workflows.
 - [Pi](https://pi.dev) - Used in 3 workflows.
 - [Vercel](https://vercel.com) - Used in 3 workflows.
+- [Agent Skills](https://github.com/addyosmani/agent-skills) - Used in 2 workflows.
 - [E2B](https://e2b.dev) - Used in 2 workflows.
 - [Eve](https://vercel.com/docs/eve) - Used in 2 workflows.
 - [FreeLLMAPI](https://freellmapi.co) - Used in 2 workflows.
@@ -213,7 +215,6 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [obsidian-mcp](https://github.com/StevenStavrakis/obsidian-mcp) - Used in 2 workflows.
 - [SkillSpector](https://github.com/NVIDIA/SkillSpector) - Used in 2 workflows.
 - [Xiaomi MiMo](https://huggingface.co/XiaomiMiMo) - Used in 2 workflows.
-- [Agent Skills](https://github.com/addyosmani/agent-skills) - Used in 1 workflow.
 - [Agent-Reach](https://github.com/Panniantong/Agent-Reach) - Used in 1 workflow.
 - [Aider](https://aider.chat) - Used in 1 workflow.
 - [Apple Core AI Models](https://github.com/apple/coreai-models) - Used in 1 workflow.
