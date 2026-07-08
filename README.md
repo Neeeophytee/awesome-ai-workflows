@@ -282,7 +282,7 @@ What we do not fake: the AI-generated step of a recipe (the part where a model p
 
 ## Contributing
 
-Built a workflow that works? [Submit it on FlowStacks](https://flowstacks.xyz/submit) or [suggest one via a GitHub issue](../../issues/new/choose) and we will build and verify it. If it passes verification, it earns a badge, a permanent page, and a spot on this list. See [CONTRIBUTING.md](CONTRIBUTING.md) for what we look for.
+Built a workflow that works? [Submit it on FlowStacks](https://flowstacks.xyz/submit) or [suggest one via a GitHub issue](https://github.com/Neeeophytee/awesome-ai-workflows/issues/new/choose) and we will build and verify it. If it passes verification, it earns a badge, a permanent page, and a spot on this list. See [CONTRIBUTING.md](CONTRIBUTING.md) for what we look for.
 
 Note: this README is generated from the verified corpus, so please do not edit it in a pull request directly. Open an issue or submit on the site instead, and it will appear here automatically once it passes CI.
 
