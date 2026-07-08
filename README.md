@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-123-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-114-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-124-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-115-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 114 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 115 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -149,6 +149,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Grind a huge one-time job overnight on a free tier's tiny rate limit](https://flowstacks.xyz/workflows/free-tier-overnight-batch) - Pace a big one-time batch (label a dataset, summarize an archive, draft alt text) through a free tier with a very low rate ceiling, proven to finish within the rate limit and the monthly token budget before you start it. `✓ CI-verified`. Stack: Mistral La Plateforme.
 - [ReMe pattern: define prospective memory as a schedule your agent can tick off](https://flowstacks.xyz/workflows/reme-prospective-schedule) - Write a reminder schedule config that an agent can load to surface its own future obligations — follow-ups, timed checks, recurring digests — and validate the structure before wiring it up. `✓ CI-verified`. Stack: ReMe.
 - [Route through a gateway with a tested open-weights fallback](https://flowstacks.xyz/workflows/model-failover-tested-open-fallback) - Keep model access from being a single point of failure: route through an OpenAI-compatible gateway and pin a fallback that is open-weights and has actually been tested, so a pulled or deprecated model is a two-minute config change, not a lost week. `✓ CI-verified`.
+- [Advisor pattern: cap how often the expensive model gets called, and catch drift](https://flowstacks.xyz/workflows/advisor-pattern-call-budget-and-drift-check) - Run a cheap executor with a rarely-consulted expensive advisor, but enforce a hard cap on advisor calls per task and a drift-check before the executor can keep going, so the benchmark's 63% discount doesn't quietly erode into nothing. `✓ CI-verified`.
 
 ## Local Inference
 
