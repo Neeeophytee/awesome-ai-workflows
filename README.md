@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-129-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-120-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-130-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-121-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 120 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 121 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -154,6 +154,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Route through a gateway with a tested open-weights fallback](https://flowstacks.xyz/workflows/model-failover-tested-open-fallback) - Keep model access from being a single point of failure: route through an OpenAI-compatible gateway and pin a fallback that is open-weights and has actually been tested, so a pulled or deprecated model is a two-minute config change, not a lost week. `✓ CI-verified`.
 - [Advisor pattern: cap how often the expensive model gets called, and catch drift](https://flowstacks.xyz/workflows/advisor-pattern-call-budget-and-drift-check) - Run a cheap executor with a rarely-consulted expensive advisor, but enforce a hard cap on advisor calls per task and a drift-check before the executor can keep going, so the benchmark's 63% discount doesn't quietly erode into nothing. `✓ CI-verified`.
 - [Chat with a CSV, but pin a known-answer guardrail so a wrong query cannot pass](https://flowstacks.xyz/workflows/chat-your-csv-known-answer-guardrail) - Ask a CSV or dataframe questions in plain English with PandasAI, but wrap it in a deterministic known-answer check so a confident-but-wrong generated query is caught instead of trusted. `✓ CI-verified`.
+- [Self-hosting the open-source stack? Prove your backup actually restores before you need it](https://flowstacks.xyz/workflows/prove-your-backup-actually-restores) - Make the one self-hosting discipline that matters a machine check: back up your database, destroy the live copy, restore from the backup, and assert the restored data matches the original exactly, so you find a broken backup in CI instead of at 2am. `✓ CI-verified`.
 
 ## Local Inference
 
