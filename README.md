@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-130-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-121-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-131-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-122-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 121 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 122 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -109,6 +109,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Verify an agent-skills plugin before you ship or install it](https://flowstacks.xyz/workflows/verify-a-skills-plugin-before-you-ship) - Check that a Claude Code / agentskills.io skills package is structurally valid, every SKILL.md has proper frontmatter and a name matching its folder, and the plugin marketplace manifest parses, so a broken skill never fails to load after you publish it. `✓ CI-verified`. Stack: Agent Skills.
 - [Wire the DeepWiki MCP into your agent so it looks up repos instead of hallucinating](https://flowstacks.xyz/workflows/deepwiki-mcp-repo-context) - Give your coding agent the DeepWiki MCP server so it can pull real context about an unfamiliar dependency mid-task, and validate the client config declares the three documented tools before you trust it. `✓ CI-verified`. Stack: DeepWiki.
 - [Validate a WrenAI semantic model's references before an agent queries through it](https://flowstacks.xyz/workflows/wren-semantic-model-referential-integrity) - Before letting an agent query through WrenAI's governed semantic layer (MDL), validate that every relationship and metric resolves to a model and column that actually exist, so a stale definition fails a check instead of quietly returning wrong-but-plausible numbers. `✓ CI-verified`.
+- [One shared memory for every coding agent: prove the configs actually point at the same server](https://flowstacks.xyz/workflows/shared-memory-one-server-many-agents) - Wire a Markdown memory MCP server (Basic Memory or an Obsidian MCP) into Claude Code, Cursor and Cline, and prove with CI that all three resolve to one server, that a write-the-memory house rule exists, and that the vault is under Git before any agent gets write access. `✓ CI-verified`.
 - [Self-Hosted Self-Improving Agent with Hermes](https://flowstacks.xyz/workflows/hermes-self-improving-agent) - Stand up a Hermes agent that remembers and improves over time on your own VPS. `author-tested`. Stack: Hermes Agent, Hetzner VPS, Ollama.
 - [Fine-Tune an Open LLM to Make It Yours](https://flowstacks.xyz/workflows/fine-tune-llm-make-it-yours) - Adapt an open-weight model to your domain with a small dataset. `author-tested`. Stack: vLLM.
 
