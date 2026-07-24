@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-131-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-122-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-132-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-123-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 122 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 123 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -62,6 +62,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [OrcaRouter for coding: judge by passing tests, not by vibes](https://flowstacks.xyz/workflows/orcarouter-tests-pass-coding) - Fan a hard coding task out to a panel and keep the candidate whose patch actually passes your tests, using the tests_pass arbiter. `✓ CI-verified`. Stack: OrcaRouter.
 - [codebase-memory-mcp: wire the knowledge graph, stop re-reading files](https://flowstacks.xyz/workflows/codebase-memory-mcp-token-savings) - Point your MCP client at a codebase-memory-mcp server so your coding agent queries the repo's knowledge graph instead of re-reading files into context on every question, cutting token spend without changing answer quality. `✓ CI-verified`. Stack: codebase-memory-mcp.
 - [Run GLM-5.2 for the bulk, escalate the hard turns to Opus 4.8](https://flowstacks.xyz/workflows/glm-52-route-bulk-escalate-opus) - Wire a cost-routing config that sends most work to cheap hosted GLM-5.2 and only the hardest turns to Opus 4.8, instead of paying Opus prices for everything. `✓ CI-verified`. Stack: GLM-5.2, OpenRouter.
+- [One AGENTS.md, no drift: prove CLAUDE.md is a real symlink and the generated files are in sync](https://flowstacks.xyz/workflows/agents-md-one-source-no-drift) - Keep one AGENTS.md as the single source of agent rules, symlink CLAUDE.md to it, and prove with CI that the symlink is committed as a symlink (not a Windows-materialised copy) and that any generated per-tool file byte-matches a fresh regeneration from the source, so nothing silently drifts. `✓ CI-verified`.
 - [Self-host CodeWiki on private code: validate the config before you spend tokens](https://flowstacks.xyz/workflows/codewiki-selfhost-config-validate) - Configure the open-source FSoft CodeWiki to generate architecture-aware docs on your own machine (so private code never leaves it), and validate the provider and model config before a full, token-spending run. `✓ CI-verified`. Stack: CodeWiki (FSoft).
 - [Persistent Memory for Codex using Obsidian](https://flowstacks.xyz/workflows/persistent-memory-codex-obsidian) - Give Codex durable, searchable long-term memory backed by an Obsidian vault. `author-tested`. Stack: Codex (OpenAI), Obsidian.
 
