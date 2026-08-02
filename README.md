@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-134-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-125-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-135-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-126-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 125 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 126 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -185,6 +185,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Vet a SKILL.md before you install it](https://flowstacks.xyz/workflows/vet-agent-skill-before-install) - Treat an agent skill like the untrusted dependency it is: parse its SKILL.md, confirm the frontmatter is well-formed, and surface every executable script it bundles, since the research flagged script-bearing skills as the most dangerous, before you ever let your agent run it. `✓ CI-verified`. Stack: Agent Skills.
 - [Agent-Reach: throwaway account, least privilege, scan before install](https://flowstacks.xyz/workflows/agent-reach-throwaway-and-scan) - Before letting Agent-Reach install system dependencies and register a skill that logs into platforms with your cookies, encode the safe defaults as a preflight manifest: a throwaway account never your main, cookie-auth risk acknowledged per platform, and a mandatory scan before install. `✓ CI-verified`. Stack: Agent-Reach, SkillSpector.
 - [Vet the fine print a star count hides: real license and a gate on dual-use tools](https://flowstacks.xyz/workflows/vet-the-fine-print-before-you-build) - Before you build on a starred repo, record its actual license (not an assumed permissive one) and whether it is dual-use, so a custom license or an impersonation risk never surprises you after you have shipped. `✓ CI-verified`. Stack: MinerU.
+- [n8n as an MCP server: prove each exposed workflow is one narrow tool behind its own token](https://flowstacks.xyz/workflows/n8n-mcp-least-privilege-exposure) - Expose n8n workflows to an agent through MCP Server Triggers without handing it your whole toolbox, by proving each agent-callable trigger is one narrow workflow behind its own bearer token with no wildcard-HTTP or delete-capable node, so a leaked token or a prompt injection is bounded. `✓ CI-verified`.
 - [Shepherd: prove an agent task is retained and least-privilege before it runs](https://flowstacks.xyz/workflows/shepherd-least-privilege-grants) - Declare an agent task's per-repo read/write grants and hold its output to one side (retained, not applied), then validate that nothing auto-applies and every write grant is explicit, before you run it. `✓ CI-verified`. Stack: Shepherd.
 
 ## Content
