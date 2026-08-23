@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-136-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-127-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-137-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-128-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 127 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 128 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -64,6 +64,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Run GLM-5.2 for the bulk, escalate the hard turns to Opus 4.8](https://flowstacks.xyz/workflows/glm-52-route-bulk-escalate-opus) - Wire a cost-routing config that sends most work to cheap hosted GLM-5.2 and only the hardest turns to Opus 4.8, instead of paying Opus prices for everything. `✓ CI-verified`. Stack: GLM-5.2, OpenRouter.
 - [One AGENTS.md, no drift: prove CLAUDE.md is a real symlink and the generated files are in sync](https://flowstacks.xyz/workflows/agents-md-one-source-no-drift) - Keep one AGENTS.md as the single source of agent rules, symlink CLAUDE.md to it, and prove with CI that the symlink is committed as a symlink (not a Windows-materialised copy) and that any generated per-tool file byte-matches a fresh regeneration from the source, so nothing silently drifts. `✓ CI-verified`.
 - [Self-host CodeWiki on private code: validate the config before you spend tokens](https://flowstacks.xyz/workflows/codewiki-selfhost-config-validate) - Configure the open-source FSoft CodeWiki to generate architecture-aware docs on your own machine (so private code never leaves it), and validate the provider and model config before a full, token-spending run. `✓ CI-verified`. Stack: CodeWiki (FSoft).
+- [agent-qa: validate Agent Skills before LLM-backed QA runs](https://flowstacks.xyz/workflows/agent-qa-skill-validation-before-qa-runs) - Run agent-qa's deterministic skill-pack validator before its authoring, result-triage, or debug-fix skills can drive a model-backed web or mobile QA run, so missing metadata, references, or MCP guidance fail in CI first. `✓ CI-verified`. Stack: agent-qa, Agent Skills.
 - [Persistent Memory for Codex using Obsidian](https://flowstacks.xyz/workflows/persistent-memory-codex-obsidian) - Give Codex durable, searchable long-term memory backed by an Obsidian vault. `author-tested`. Stack: Codex (OpenAI), Obsidian.
 
 ## Agents and Orchestration
@@ -212,6 +213,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog) - Used in 4 workflows.
 - [OrcaRouter](https://orcarouter.ai) - Used in 4 workflows.
 - [vLLM](https://github.com/vllm-project/vllm) - Used in 4 workflows.
+- [Agent Skills](https://github.com/addyosmani/agent-skills) - Used in 3 workflows.
 - DeepSeek V4 - Used in 3 workflows.
 - [GLM-5.2](https://huggingface.co/unsloth/GLM-5.2-GGUF) - Used in 3 workflows.
 - [Kilo Code](https://kilocode.ai) - Used in 3 workflows.
@@ -219,7 +221,6 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [OpenRouter](https://openrouter.ai) - Used in 3 workflows.
 - [Pi](https://pi.dev) - Used in 3 workflows.
 - [Vercel](https://vercel.com) - Used in 3 workflows.
-- [Agent Skills](https://github.com/addyosmani/agent-skills) - Used in 2 workflows.
 - [E2B](https://e2b.dev) - Used in 2 workflows.
 - [Eve](https://vercel.com/docs/eve) - Used in 2 workflows.
 - [FreeLLMAPI](https://freellmapi.co) - Used in 2 workflows.
@@ -228,6 +229,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [obsidian-mcp](https://github.com/StevenStavrakis/obsidian-mcp) - Used in 2 workflows.
 - [SkillSpector](https://github.com/NVIDIA/SkillSpector) - Used in 2 workflows.
 - [Xiaomi MiMo](https://huggingface.co/XiaomiMiMo) - Used in 2 workflows.
+- [agent-qa](https://vostride.com) - Used in 1 workflow.
 - [Agent-Reach](https://github.com/Panniantong/Agent-Reach) - Used in 1 workflow.
 - [Aider](https://aider.chat) - Used in 1 workflow.
 - [Apple Core AI Models](https://github.com/apple/coreai-models) - Used in 1 workflow.
