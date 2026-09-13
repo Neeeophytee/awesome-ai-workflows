@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-139-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-130-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-141-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-132-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 130 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 132 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -141,6 +141,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Track a tool's hype curve across any Substack (no API key)](https://flowstacks.xyz/workflows/substack-hype-tracker) - Count how often a tool or model is mentioned in a Substack's posts over time, so you can see a hype curve rise and fade, using only the public archive. `✓ CI-verified`. Stack: Substack.
 - [Pick a model with evidence: a GitHub Models bake-off that fits the free cap](https://flowstacks.xyz/workflows/github-models-prompt-bakeoff) - Run the few prompts that actually matter across several models on GitHub Models' free tier, then keep the winner, with the daily call budget proven to fit before you start. `✓ CI-verified`. Stack: GitHub Models.
 - [Read your token receipts right: volume and cost are different leaderboards](https://flowstacks.xyz/workflows/token-volume-vs-cost-receipts) - Attribute your model usage by both tokens and dollars, so you can see the flip the OpenRouter rankings show: cheap open models dominate volume while premium models dominate spend, and never mistake a high token ranking for value. `✓ CI-verified`. Stack: OpenRouter.
+- [STEM source → reviewable LaTeX notes with a sandboxed compile gate](https://flowstacks.xyz/workflows/stem-source-to-verified-latex-notes) - Turn user-selected STEM references into source-tagged LaTeX study material while keeping installs and compilation opt-in, preserving discrepancies, and independently proving that every pinned upstream template compiles in Tectonic's untrusted mode. `✓ CI-verified`. Stack: stem-notes, Claude Code, Tectonic.
 - [Hermes + NotebookLM "Second Brain"](https://flowstacks.xyz/workflows/hermes-notebooklm-second-brain) - Pair Hermes with NotebookLM to build a self-researching, self-teaching knowledge system. `author-tested`. Stack: Hermes Agent, NotebookLM, Obsidian. Replaces Perplexity Pro.
 
 ## Automation
@@ -162,6 +163,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Advisor pattern: cap how often the expensive model gets called, and catch drift](https://flowstacks.xyz/workflows/advisor-pattern-call-budget-and-drift-check) - Run a cheap executor with a rarely-consulted expensive advisor, but enforce a hard cap on advisor calls per task and a drift-check before the executor can keep going, so the benchmark's 63% discount doesn't quietly erode into nothing. `✓ CI-verified`.
 - [Chat with a CSV, but pin a known-answer guardrail so a wrong query cannot pass](https://flowstacks.xyz/workflows/chat-your-csv-known-answer-guardrail) - Ask a CSV or dataframe questions in plain English with PandasAI, but wrap it in a deterministic known-answer check so a confident-but-wrong generated query is caught instead of trusted. `✓ CI-verified`.
 - [Self-hosting the open-source stack? Prove your backup actually restores before you need it](https://flowstacks.xyz/workflows/prove-your-backup-actually-restores) - Make the one self-hosting discipline that matters a machine check: back up your database, destroy the live copy, restore from the backup, and assert the restored data matches the original exactly, so you find a broken backup in CI instead of at 2am. `✓ CI-verified`.
+- [Mastra: stop on incomplete private soccer moneyline outcome sets](https://flowstacks.xyz/workflows/private-soccer-moneyline-shape-gate-mastra) - Run a deterministic two-step Mastra workflow that checks supplied soccer moneyline response shapes for one home, away, and Draw outcome before any downstream private analysis, without treating runtime success as data completeness or a betting recommendation. `✓ CI-verified`. Stack: Mastra, ParlayAPI.
 
 ## Local Inference
 
@@ -205,7 +207,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 
 - [Hermes Agent](https://hermes-agent.nousresearch.com) - Used in 16 workflows.
 - [Obsidian](https://obsidian.md) - Used in 15 workflows.
-- [Claude Code](https://claude.com/claude-code) - Used in 12 workflows.
+- [Claude Code](https://claude.com/claude-code) - Used in 13 workflows.
 - [Ollama](https://ollama.com) - Used in 8 workflows.
 - [Claude Desktop](https://claude.ai/download) - Used in 7 workflows.
 - [MCPVault](https://github.com/bitbonsai/mcpvault) - Used in 7 workflows.
@@ -256,6 +258,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [Khoj](https://khoj.dev) - Used in 1 workflow.
 - [LibreChat](https://www.librechat.ai) - Used in 1 workflow.
 - [LlamaIndex](https://www.llamaindex.ai) - Used in 1 workflow.
+- [Mastra](https://mastra.ai) - Used in 1 workflow.
 - [mcp-obsidian](https://github.com/MarkusPfundstein/mcp-obsidian) - Used in 1 workflow.
 - [Mem0](https://mem0.ai) - Used in 1 workflow.
 - [MinerU](https://mineru.net) - Used in 1 workflow.
@@ -270,6 +273,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [Orch8](https://orch8.io) - Used in 1 workflow.
 - [Outlines](https://github.com/dottxt-ai/outlines) - Used in 1 workflow.
 - PageIndex - Used in 1 workflow.
+- [ParlayAPI](https://parlay-api.com) - Used in 1 workflow.
 - [Piper TTS](https://github.com/rhasspy/piper) - Used in 1 workflow.
 - [Postiz](https://postiz.com) - Used in 1 workflow.
 - [promptfoo](https://promptfoo.dev) - Used in 1 workflow.
@@ -279,7 +283,9 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [Scrapy](https://scrapy.org) - Used in 1 workflow.
 - [Shepherd](https://shepherd-agents.ai) - Used in 1 workflow.
 - [smolagents](https://huggingface.co/docs/smolagents) - Used in 1 workflow.
+- [stem-notes](https://github.com/Shass27/stem-notes) - Used in 1 workflow.
 - [Substack](https://substack.com) - Used in 1 workflow.
+- [Tectonic](https://tectonic-typesetting.github.io/) - Used in 1 workflow.
 - [Tencent Hy3](https://github.com/Tencent-Hunyuan/Hy3-preview) - Used in 1 workflow.
 - [tldraw](https://tldraw.dev) - Used in 1 workflow.
 - [Unsloth](https://unsloth.ai) - Used in 1 workflow.
