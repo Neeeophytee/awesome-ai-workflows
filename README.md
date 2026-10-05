@@ -71,6 +71,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Persistent Memory for Codex using Obsidian](https://flowstacks.xyz/workflows/persistent-memory-codex-obsidian) - Give Codex durable, searchable long-term memory backed by an Obsidian vault. `author-tested`. Stack: Codex (OpenAI), Obsidian.
 
 ## Agents and Orchestration
+- [AI Group Call](https://aigroupcall.app) - Practice pitches and interviews against a panel of AI voices that push back live, then share the transcript.
 
 - [Obsidian Vault as the Core of Your Agent Harness](https://flowstacks.xyz/workflows/obsidian-agent-harness) - Use an Obsidian vault as the shared memory and control surface for your agents. `✓ CI-verified`. Stack: Obsidian, Hermes Agent, Claude Code.
 - [Meeting Processor: Raw Dump to Structured Note](https://flowstacks.xyz/workflows/obsidian-claude-meeting-processor) - Paste a raw meeting dump into your vault and have Claude turn it into action items, decisions, and links. `✓ CI-verified`. Stack: Obsidian, obsidian-mcp, Claude Desktop.
