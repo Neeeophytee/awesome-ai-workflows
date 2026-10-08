@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-144-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-135-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-144-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-133-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -19,7 +19,7 @@ Like it? **Star the repo** so other builders can find workflows that actually st
 
 </div>
 
-A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 135 of them are checked by CI on every change, not by hand.
+A curated index of AI workflows that real builders actually run: agent harnesses, local-inference setups, RAG pipelines, coding-agent recipes, and automations. Most lists hand you code that worked _once_; every recipe here links to a page that shows whether it still works, and 133 of them are checked by CI on every change, not by hand.
 
 Why "verified" is the whole point: AI recipes rot fast. Models change, flags break, packages move. A recipe that ran six months ago is a coin flip today. So we wire the deterministic parts of each recipe into CI, and when a step breaks, the badge drops.
 
@@ -67,8 +67,8 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [agent-qa: validate Agent Skills before LLM-backed QA runs](https://flowstacks.xyz/workflows/agent-qa-skill-validation-before-qa-runs) - Run agent-qa's deterministic skill-pack validator before its authoring, result-triage, or debug-fix skills can drive a model-backed web or mobile QA run, so missing metadata, references, or MCP guidance fail in CI first. `✓ CI-verified`. Stack: agent-qa, Agent Skills.
 - [code-review-skill: verify independent review and deterministic P0/P1 verdicts](https://flowstacks.xyz/workflows/code-review-skill-independent-verdict-contract) - Pin and independently validate code-review-skill's local and GitHub review contracts before installation, so packaging drift, writable local review, implicit PR mutation, self-approval, merge authority, or a severity-to-verdict mismatch fails CI without invoking a model or running upstream code. `✓ CI-verified`. Stack: code-review-skill.
 - [anti-slop: fail delivery on low-contrast normal text](https://flowstacks.xyz/workflows/anti-slop-normal-text-contrast-gate) - Use anti-slop's UI review guidance, then run its keyless local checker on every solid sRGB normal-text/background pair and stop delivery when the unrounded WCAG AA ratio is below 4.5:1. `✓ CI-verified`. Stack: anti-slop.
-- [Oh My Design: evidence-led UI work with deterministic delivery gates](https://flowstacks.xyz/workflows/oh-my-design-evidence-to-blind-rendered-critique) - Turn an AI-assisted interface request into an evidence-backed brief, traceable copy, deliberate structure, one production build, and a blind rendered critique, while using Oh My Design's local CLI gates to catch contract drift, stale source, unsafe stack replacement, and reviewable UI-risk signals before delivery. `✓ CI-verified`. Stack: Oh My Design.
 - [Persistent Memory for Codex using Obsidian](https://flowstacks.xyz/workflows/persistent-memory-codex-obsidian) - Give Codex durable, searchable long-term memory backed by an Obsidian vault. `author-tested`. Stack: Codex (OpenAI), Obsidian.
+- [Oh My Design: evidence-led UI work with deterministic delivery gates](https://flowstacks.xyz/workflows/oh-my-design-evidence-to-blind-rendered-critique) - Turn an AI-assisted interface request into an evidence-backed brief, traceable copy, deliberate structure, one production build, and a blind rendered critique, while using Oh My Design's local CLI gates to catch contract drift, stale source, unsafe stack replacement, and reviewable UI-risk signals before delivery. `author-tested`. Stack: Oh My Design.
 
 ## Agents and Orchestration
 
@@ -165,7 +165,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [Advisor pattern: cap how often the expensive model gets called, and catch drift](https://flowstacks.xyz/workflows/advisor-pattern-call-budget-and-drift-check) - Run a cheap executor with a rarely-consulted expensive advisor, but enforce a hard cap on advisor calls per task and a drift-check before the executor can keep going, so the benchmark's 63% discount doesn't quietly erode into nothing. `✓ CI-verified`.
 - [Chat with a CSV, but pin a known-answer guardrail so a wrong query cannot pass](https://flowstacks.xyz/workflows/chat-your-csv-known-answer-guardrail) - Ask a CSV or dataframe questions in plain English with PandasAI, but wrap it in a deterministic known-answer check so a confident-but-wrong generated query is caught instead of trusted. `✓ CI-verified`.
 - [Self-hosting the open-source stack? Prove your backup actually restores before you need it](https://flowstacks.xyz/workflows/prove-your-backup-actually-restores) - Make the one self-hosting discipline that matters a machine check: back up your database, destroy the live copy, restore from the backup, and assert the restored data matches the original exactly, so you find a broken backup in CI instead of at 2am. `✓ CI-verified`.
-- [Mastra: stop on incomplete private soccer moneyline outcome sets](https://flowstacks.xyz/workflows/private-soccer-moneyline-shape-gate-mastra) - Run a deterministic two-step Mastra workflow that checks supplied soccer moneyline response shapes for one home, away, and Draw outcome before any downstream private analysis, without treating runtime success as data completeness or a betting recommendation. `✓ CI-verified`. Stack: Mastra, ParlayAPI.
+- [Mastra: stop on incomplete private soccer moneyline outcome sets](https://flowstacks.xyz/workflows/private-soccer-moneyline-shape-gate-mastra) - Run a deterministic two-step Mastra workflow that checks supplied soccer moneyline response shapes for one home, away, and Draw outcome before any downstream private analysis, without treating runtime success as data completeness or a betting recommendation. `author-tested`. Stack: Mastra, ParlayAPI.
 
 ## Local Inference
 
