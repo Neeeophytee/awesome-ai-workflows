@@ -7,7 +7,7 @@
 
 # Awesome AI Workflows
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-147-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-136-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/) ![Recipes](https://img.shields.io/badge/recipes-148-8a5a44) ![CI-verified](https://img.shields.io/badge/CI--verified-136-2f855a) [![FlowStacks](https://img.shields.io/badge/browse-flowstacks.xyz-8a5a44)](https://flowstacks.xyz) [![r/WebAfterAI](https://img.shields.io/badge/r%2FWebAfterAI-11K%20online-FF4500?logo=reddit&logoColor=white)](https://reddit.com/r/WebAfterAI)
 
 <img src="assets/verify-demo.gif" alt="A recipe breaks upstream and the CI-verified badge drops automatically" width="82%" />
 
@@ -199,6 +199,7 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 - [n8n as an MCP server: prove each exposed workflow is one narrow tool behind its own token](https://flowstacks.xyz/workflows/n8n-mcp-least-privilege-exposure) - Expose n8n workflows to an agent through MCP Server Triggers without handing it your whole toolbox, by proving each agent-callable trigger is one narrow workflow behind its own bearer token with no wildcard-HTTP or delete-capable node, so a leaked token or a prompt injection is bounded. `✓ CI-verified`.
 - [Shepherd: prove an agent task is retained and least-privilege before it runs](https://flowstacks.xyz/workflows/shepherd-least-privilege-grants) - Declare an agent task's per-repo read/write grants and hold its output to one side (retained, not applied), then validate that nothing auto-applies and every write grant is explicit, before you run it. `✓ CI-verified`. Stack: Shepherd.
 - [STACK: allow GitHub issue reads and block issue creation](https://flowstacks.xyz/workflows/stack-read-only-github-issue-boundary) - Prepare a narrowly scoped STACK GitHub Passport that permits one issue-list read while denying issue creation, with the submitted runner contract verified offline and live provider enforcement kept as a separate credentialed check. `✓ CI-verified`. Stack: STACK.
+- [Review Seeded Security Findings with ShipCheck](https://flowstacks.xyz/workflows/shipcheck-public-demo-security-findings-review) - Manually scan a synthetic public repository and review secret, environment-file and dependency findings. `author-tested`. Stack: ShipCheck.
 
 ## Content
 
@@ -294,6 +295,7 @@ The tools these workflows are built on. Maintainers: if your tool is listed and 
 - [Sakana Fugu](https://sakana.ai/fugu/) - Used in 1 workflow.
 - [Scrapy](https://scrapy.org) - Used in 1 workflow.
 - [Shepherd](https://shepherd-agents.ai) - Used in 1 workflow.
+- [ShipCheck](https://vibeshipcheck.com) - Used in 1 workflow.
 - [smolagents](https://huggingface.co/docs/smolagents) - Used in 1 workflow.
 - [STACK](https://getstack.run) - Used in 1 workflow.
 - [stem-notes](https://github.com/Shass27/stem-notes) - Used in 1 workflow.
