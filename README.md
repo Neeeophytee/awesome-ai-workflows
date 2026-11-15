@@ -138,6 +138,8 @@ Why "verified" is the whole point: AI recipes rot fast. Models change, flags bre
 
 ## Research
 
+- [No Stairs Please MCP](https://nostairsplease.com/mcp) — Search verified live music venues, stage specs, and booking contacts across all 50 US states ([nostairsplease.com](https://nostairsplease.com/)).
+
 - [Obsidian × MCPVault: The Decision Journal](https://flowstacks.xyz/workflows/mcpvault-decision-journal) - Log decisions with frontmatter, let Claude update the outcome safely, and read the patterns each quarter. `✓ CI-verified`. Stack: Obsidian, MCPVault, Claude Desktop.
 - [Fabric + Fable 5: Get Through Your Reading Pile](https://flowstacks.xyz/workflows/fabric-fable5-reading-patterns) - Pipe any article, video transcript, or document into a prebuilt Fabric pattern and have Fable 5 summarize, extract, or analyze it in one line. `✓ CI-verified`. Stack: Fabric.
 - [Track a tool's hype curve across any Substack (no API key)](https://flowstacks.xyz/workflows/substack-hype-tracker) - Count how often a tool or model is mentioned in a Substack's posts over time, so you can see a hype curve rise and fade, using only the public archive. `✓ CI-verified`. Stack: Substack.
